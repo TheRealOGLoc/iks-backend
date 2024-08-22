@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blogs_elements_banners",
+  "info": {
+    "displayName": "Banner"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Blogs"
+    },
+    "description": {
+      "type": "string",
+      "default": "Our take on everything that makes a business thrive or struggle."
+    },
+    "searchPlaceholder": {
+      "type": "string",
+      "default": "Search"
+    }
+  }
+}

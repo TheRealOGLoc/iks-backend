@@ -21,10 +21,10 @@
         "homepage-elements.numbers",
         "homepage-elements.hero",
         "homepage-elements.case-studies",
-        "global-elements.align",
         "global-elements.footer",
         "global-elements.transform-business",
-        "homepage-elements.clients"
+        "homepage-elements.clients",
+        "global-elements.align"
       ]
     }
   }

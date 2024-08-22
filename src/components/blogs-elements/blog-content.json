@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_blogs_elements_blog_contents",
+  "info": {
+    "displayName": "BlogContent",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "postTime": {
+      "type": "date",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "blogImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "readTime": {
+      "type": "integer",
+      "default": 5
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

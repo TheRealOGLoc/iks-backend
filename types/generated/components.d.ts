@@ -224,6 +224,34 @@ export interface GlobalElementsAlign extends Schema.Component {
   };
 }
 
+export interface BlogsElementsBlogContent extends Schema.Component {
+  collectionName: 'components_blogs_elements_blog_contents';
+  info: {
+    displayName: 'BlogContent';
+    description: '';
+  };
+  attributes: {
+    postTime: Attribute.Date & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
+    blogImage: Attribute.Media<'images'>;
+    readTime: Attribute.Integer & Attribute.DefaultTo<5>;
+    content: Attribute.RichText;
+  };
+}
+
+export interface BlogsElementsBanner extends Schema.Component {
+  collectionName: 'components_blogs_elements_banners';
+  info: {
+    displayName: 'Banner';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.DefaultTo<'Blogs'>;
+    description: Attribute.String &
+      Attribute.DefaultTo<'Our take on everything that makes a business thrive or struggle.'>;
+    searchPlaceholder: Attribute.String & Attribute.DefaultTo<'Search'>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -242,6 +270,8 @@ declare module '@strapi/types' {
       'global-elements.transform-business': GlobalElementsTransformBusiness;
       'global-elements.footer': GlobalElementsFooter;
       'global-elements.align': GlobalElementsAlign;
+      'blogs-elements.blog-content': BlogsElementsBlogContent;
+      'blogs-elements.banner': BlogsElementsBanner;
     }
   }
 }
