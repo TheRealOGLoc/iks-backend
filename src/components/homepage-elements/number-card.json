@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_homepage_elements_number_cards",
+  "info": {
+    "displayName": "NumberCard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "number": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "text"
+    },
+    "plusSign": {
+      "type": "boolean",
+      "default": false
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

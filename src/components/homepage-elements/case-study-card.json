@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_homepage_elements_case_study_cards",
+  "info": {
+    "displayName": "CaseStudyCard"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

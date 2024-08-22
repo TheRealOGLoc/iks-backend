@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_global_elements_transform_businesses",
+  "info": {
+    "displayName": "TransformBusiness"
+  },
+  "options": {},
+  "attributes": {
+    "titleLeftPart": {
+      "type": "string"
+    },
+    "titleRightPart": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "buttonTextTouch": {
+      "type": "string"
+    },
+    "buttonTextExplore": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

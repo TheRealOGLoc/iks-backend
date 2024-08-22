@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_homepage_elements_numbers",
+  "info": {
+    "displayName": "Numbers",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titleLeftPart": {
+      "type": "string"
+    },
+    "titleRightPart": {
+      "type": "string"
+    },
+    "card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage-elements.number-card"
+    }
+  }
+}

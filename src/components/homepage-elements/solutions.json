@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_homepage_elements_solutions",
+  "info": {
+    "displayName": "Solutions",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titleLeftPart": {
+      "type": "string"
+    },
+    "titleRightPart": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage-elements.solution-card"
+    }
+  }
+}

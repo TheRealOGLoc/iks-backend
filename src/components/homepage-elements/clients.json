@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_homepage_elements_clients",
+  "info": {
+    "displayName": "Clients",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titleLeftPart": {
+      "type": "string"
+    },
+    "titleRightPart": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "firstRow": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "secondRow": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "collectionName": "components_global_elements_footers",
+  "info": {
+    "displayName": "Footer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "companyName": {
+      "type": "string",
+      "default": "Infinikey Solutions"
+    },
+    "companyDescription": {
+      "type": "text",
+      "default": "We bring the years, global experience, and stamina to guide our clients through new and often disruptive realities."
+    },
+    "emailPlaceHolder": {
+      "type": "string",
+      "default": "Enter your email"
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Subscribe"
+    },
+    "menuLabel": {
+      "type": "string",
+      "default": "Menu"
+    },
+    "menuHome": {
+      "type": "string",
+      "default": "Home"
+    },
+    "menuCaseStudies": {
+      "type": "string",
+      "default": "Case studies"
+    },
+    "menuFeatures": {
+      "type": "string",
+      "default": "Features"
+    },
+    "menuDownloads": {
+      "type": "string",
+      "default": "Downloads"
+    },
+    "menuBlogs": {
+      "type": "string",
+      "default": "Blogs"
+    },
+    "companyLabel": {
+      "type": "string",
+      "default": "Company"
+    },
+    "companyAbout": {
+      "type": "string",
+      "default": "About"
+    },
+    "companyContactUs": {
+      "type": "string",
+      "default": "Contact us"
+    },
+    "companyCareers": {
+      "type": "string",
+      "default": "Careers"
+    },
+    "companyHelpCenter": {
+      "type": "string",
+      "default": "Help Center"
+    },
+    "companySupport": {
+      "type": "string",
+      "default": "Support"
+    },
+    "locationLabel": {
+      "type": "string",
+      "default": "Location"
+    },
+    "locationAddress": {
+      "type": "text",
+      "default": "SYDNEY, AUSTRALIA Level 14, 32 Smith Road Paramatta NSW 2150"
+    },
+    "phoneLabel": {
+      "type": "string",
+      "default": "Phone"
+    },
+    "phoneNumber": {
+      "type": "string",
+      "default": "02 9139 8874"
+    },
+    "mailLabel": {
+      "type": "string",
+      "default": "Mail"
+    },
+    "mailAddress": {
+      "type": "string",
+      "default": "info@infinikeysolutions.com.au"
+    }
+  }
+}

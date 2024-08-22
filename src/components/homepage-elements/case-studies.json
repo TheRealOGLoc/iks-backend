@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_homepage_elements_case_studies",
+  "info": {
+    "displayName": "CaseStudies",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titleLeftPart": {
+      "type": "string"
+    },
+    "titleRightPart": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "card": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage-elements.case-study-card"
+    }
+  }
+}

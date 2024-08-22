@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_homepage_elements_aligns",
+  "info": {
+    "displayName": "Align",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titleLeftPart": {
+      "type": "string"
+    },
+    "titleRightPart": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
