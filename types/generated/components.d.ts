@@ -285,12 +285,14 @@ export interface BlogsElementsBanner extends Schema.Component {
   collectionName: 'components_blogs_elements_banners';
   info: {
     displayName: 'Banner';
+    description: '';
   };
   attributes: {
     title: Attribute.String & Attribute.DefaultTo<'Blogs'>;
     description: Attribute.String &
       Attribute.DefaultTo<'Our take on everything that makes a business thrive or struggle.'>;
     searchPlaceholder: Attribute.String & Attribute.DefaultTo<'Search'>;
+    image: Attribute.Media<'images'>;
   };
 }
 
