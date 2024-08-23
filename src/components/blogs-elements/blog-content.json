@@ -27,7 +27,12 @@
       "default": 5
     },
     "content": {
-      "type": "richtext"
+      "type": "blocks"
+    },
+    "showSubscribeCard": {
+      "type": "boolean",
+      "default": true,
+      "required": true
     }
   }
 }

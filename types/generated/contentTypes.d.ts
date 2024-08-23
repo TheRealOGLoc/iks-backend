@@ -368,13 +368,23 @@ export interface ApiBlogBlog extends Schema.CollectionType {
     singularName: 'blog';
     pluralName: 'blogs';
     displayName: 'Blog';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    banner: Attribute.Component<'blogs-elements.banner'>;
-    content: Attribute.Component<'blogs-elements.blog-content'>;
+    title: Attribute.String & Attribute.Required;
+    components: Attribute.DynamicZone<
+      [
+        'blogs-elements.banner',
+        'blogs-elements.blog-content',
+        'blogs-elements.latest-posts',
+        'blogs-elements.leave-reply',
+        'global-elements.footer',
+        'global-elements.transform-business'
+      ]
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

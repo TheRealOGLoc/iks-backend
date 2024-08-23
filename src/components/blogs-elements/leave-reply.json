@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_blogs_elements_leave_replies",
+  "info": {
+    "displayName": "LeaveReply"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Leave a Reply"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Your email address will not be published. Required fields are marked *"
+    },
+    "nameLabel": {
+      "type": "string",
+      "default": "Name"
+    },
+    "emailLabel": {
+      "type": "string",
+      "default": "Email"
+    },
+    "websiteLabel": {
+      "type": "string",
+      "default": "Website"
+    },
+    "commentLabel": {
+      "type": "string",
+      "default": "Comment *"
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Send message"
+    }
+  }
+}

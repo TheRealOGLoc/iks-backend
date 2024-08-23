@@ -1,31 +1,38 @@
 {
   "collectionName": "components_global_elements_transform_businesses",
   "info": {
-    "displayName": "TransformBusiness"
+    "displayName": "TransformBusiness",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "titleLeftPart": {
-      "type": "string"
+      "type": "string",
+      "default": "Ready to"
     },
     "titleRightPart": {
-      "type": "string"
+      "type": "string",
+      "default": "Transform Your Business?"
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "default": "Ready to Transform Your Business? Don't wait; take the first step towards achieving your business goals. Contact us today to discuss how we can help you achieve lasting success."
     },
     "buttonTextTouch": {
-      "type": "string"
+      "type": "string",
+      "default": "Get in Touch"
     },
     "buttonTextExplore": {
-      "type": "string"
+      "type": "string",
+      "default": "Explore More"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

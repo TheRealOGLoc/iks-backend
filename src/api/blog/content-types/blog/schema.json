@@ -4,22 +4,28 @@
   "info": {
     "singularName": "blog",
     "pluralName": "blogs",
-    "displayName": "Blog"
+    "displayName": "Blog",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "banner": {
-      "type": "component",
-      "repeatable": false,
-      "component": "blogs-elements.banner"
+    "title": {
+      "type": "string",
+      "required": true
     },
-    "content": {
-      "type": "component",
-      "repeatable": false,
-      "component": "blogs-elements.blog-content"
+    "components": {
+      "type": "dynamiczone",
+      "components": [
+        "blogs-elements.banner",
+        "blogs-elements.blog-content",
+        "blogs-elements.latest-posts",
+        "blogs-elements.leave-reply",
+        "global-elements.footer",
+        "global-elements.transform-business"
+      ]
     }
   }
 }

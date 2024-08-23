@@ -164,13 +164,16 @@ export interface GlobalElementsTransformBusiness extends Schema.Component {
   collectionName: 'components_global_elements_transform_businesses';
   info: {
     displayName: 'TransformBusiness';
+    description: '';
   };
   attributes: {
-    titleLeftPart: Attribute.String;
-    titleRightPart: Attribute.String;
-    description: Attribute.Text;
-    buttonTextTouch: Attribute.String;
-    buttonTextExplore: Attribute.String;
+    titleLeftPart: Attribute.String & Attribute.DefaultTo<'Ready to'>;
+    titleRightPart: Attribute.String &
+      Attribute.DefaultTo<'Transform Your Business?'>;
+    description: Attribute.Text &
+      Attribute.DefaultTo<"Ready to Transform Your Business? Don't wait; take the first step towards achieving your business goals. Contact us today to discuss how we can help you achieve lasting success.">;
+    buttonTextTouch: Attribute.String & Attribute.DefaultTo<'Get in Touch'>;
+    buttonTextExplore: Attribute.String & Attribute.DefaultTo<'Explore More'>;
     image: Attribute.Media<'images'>;
   };
 }
@@ -224,6 +227,42 @@ export interface GlobalElementsAlign extends Schema.Component {
   };
 }
 
+export interface BlogsElementsLeaveReply extends Schema.Component {
+  collectionName: 'components_blogs_elements_leave_replies';
+  info: {
+    displayName: 'LeaveReply';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.DefaultTo<'Leave a Reply'>;
+    subtitle: Attribute.String &
+      Attribute.DefaultTo<'Your email address will not be published. Required fields are marked *'>;
+    nameLabel: Attribute.String & Attribute.DefaultTo<'Name'>;
+    emailLabel: Attribute.String & Attribute.DefaultTo<'Email'>;
+    websiteLabel: Attribute.String & Attribute.DefaultTo<'Website'>;
+    commentLabel: Attribute.String & Attribute.DefaultTo<'Comment *'>;
+    buttonText: Attribute.String & Attribute.DefaultTo<'Send message'>;
+  };
+}
+
+export interface BlogsElementsLatestPosts extends Schema.Component {
+  collectionName: 'components_blogs_elements_latest_posts';
+  info: {
+    displayName: 'LatestPosts';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.DefaultTo<'Latest posts'>;
+    numberOfLastePost: Attribute.Integer &
+      Attribute.SetMinMax<
+        {
+          min: 1;
+          max: 3;
+        },
+        number
+      > &
+      Attribute.DefaultTo<3>;
+  };
+}
+
 export interface BlogsElementsBlogContent extends Schema.Component {
   collectionName: 'components_blogs_elements_blog_contents';
   info: {
@@ -235,7 +274,10 @@ export interface BlogsElementsBlogContent extends Schema.Component {
     title: Attribute.String & Attribute.Required;
     blogImage: Attribute.Media<'images'>;
     readTime: Attribute.Integer & Attribute.DefaultTo<5>;
-    content: Attribute.RichText;
+    content: Attribute.Blocks;
+    showSubscribeCard: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<true>;
   };
 }
 
@@ -270,6 +312,8 @@ declare module '@strapi/types' {
       'global-elements.transform-business': GlobalElementsTransformBusiness;
       'global-elements.footer': GlobalElementsFooter;
       'global-elements.align': GlobalElementsAlign;
+      'blogs-elements.leave-reply': BlogsElementsLeaveReply;
+      'blogs-elements.latest-posts': BlogsElementsLatestPosts;
       'blogs-elements.blog-content': BlogsElementsBlogContent;
       'blogs-elements.banner': BlogsElementsBanner;
     }
