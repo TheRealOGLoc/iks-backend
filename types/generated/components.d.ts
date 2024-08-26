@@ -248,18 +248,12 @@ export interface BlogsElementsLatestPosts extends Schema.Component {
   collectionName: 'components_blogs_elements_latest_posts';
   info: {
     displayName: 'LatestPosts';
+    description: '';
   };
   attributes: {
-    title: Attribute.String & Attribute.DefaultTo<'Latest posts'>;
-    numberOfLastePost: Attribute.Integer &
-      Attribute.SetMinMax<
-        {
-          min: 1;
-          max: 3;
-        },
-        number
-      > &
-      Attribute.DefaultTo<3>;
+    showLatestBlogs: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<true>;
   };
 }
 
