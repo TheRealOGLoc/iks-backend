@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_services_elements_whys_choose_us_cards",
+  "info": {
+    "displayName": "WhysChooseUsCard"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

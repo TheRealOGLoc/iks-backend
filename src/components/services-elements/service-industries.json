@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_services_elements_service_industries",
+  "info": {
+    "displayName": "ServiceIndustries",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titleLeftPart": {
+      "type": "string"
+    },
+    "titleRightPart": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "services-elements.industry-card"
+    }
+  }
+}

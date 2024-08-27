@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_services_elements_service_modules",
+  "info": {
+    "displayName": "ServiceModules"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

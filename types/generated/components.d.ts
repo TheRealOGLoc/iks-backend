@@ -1,5 +1,97 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface ServicesElementsWhysChooseUsCard extends Schema.Component {
+  collectionName: 'components_services_elements_whys_choose_us_cards';
+  info: {
+    displayName: 'WhysChooseUsCard';
+  };
+  attributes: {
+    icon: Attribute.Media<'images'>;
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface ServicesElementsWhyChooseUs extends Schema.Component {
+  collectionName: 'components_services_elements_why_chooseuses';
+  info: {
+    displayName: 'WhyChooseUs';
+  };
+  attributes: {
+    titleLeftPart: Attribute.String;
+    titleRightPart: Attribute.String;
+    card: Attribute.Component<'services-elements.whys-choose-us-card', true>;
+  };
+}
+
+export interface ServicesElementsServiceModules extends Schema.Component {
+  collectionName: 'components_services_elements_service_modules';
+  info: {
+    displayName: 'ServiceModules';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface ServicesElementsServiceIndustries extends Schema.Component {
+  collectionName: 'components_services_elements_service_industries';
+  info: {
+    displayName: 'ServiceIndustries';
+    description: '';
+  };
+  attributes: {
+    titleLeftPart: Attribute.String;
+    titleRightPart: Attribute.String;
+    description: Attribute.Text;
+    buttonText: Attribute.String;
+    card: Attribute.Component<'services-elements.industry-card', true>;
+  };
+}
+
+export interface ServicesElementsServiceCategory extends Schema.Component {
+  collectionName: 'components_services_elements_service_categories';
+  info: {
+    displayName: 'ServiceCategory';
+    description: '';
+  };
+  attributes: {
+    titleLeftPart: Attribute.String;
+    description: Attribute.Text;
+    buttonText: Attribute.String;
+    modules: Attribute.Component<'services-elements.service-modules', true>;
+    titleRightPart: Attribute.String;
+  };
+}
+
+export interface ServicesElementsIndustryCard extends Schema.Component {
+  collectionName: 'components_services_elements_industry_cards';
+  info: {
+    displayName: 'IndustryCard';
+    description: '';
+  };
+  attributes: {
+    image: Attribute.Media<'images'>;
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface ServicesElementsHero extends Schema.Component {
+  collectionName: 'components_services_elements_heroes';
+  info: {
+    displayName: 'Hero';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    heroBackground: Attribute.Media<'images'>;
+    description: Attribute.Text;
+    buttonText: Attribute.String;
+  };
+}
+
 export interface HomepageElementsWhyUs extends Schema.Component {
   collectionName: 'components_homepage_elements_whyuses';
   info: {
@@ -293,6 +385,13 @@ export interface BlogsElementsBanner extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'services-elements.whys-choose-us-card': ServicesElementsWhysChooseUsCard;
+      'services-elements.why-choose-us': ServicesElementsWhyChooseUs;
+      'services-elements.service-modules': ServicesElementsServiceModules;
+      'services-elements.service-industries': ServicesElementsServiceIndustries;
+      'services-elements.service-category': ServicesElementsServiceCategory;
+      'services-elements.industry-card': ServicesElementsIndustryCard;
+      'services-elements.hero': ServicesElementsHero;
       'homepage-elements.why-us': HomepageElementsWhyUs;
       'homepage-elements.why-us-card': HomepageElementsWhyUsCard;
       'homepage-elements.solutions': HomepageElementsSolutions;

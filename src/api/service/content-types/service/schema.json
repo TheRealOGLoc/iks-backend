@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "components": {
+      "type": "dynamiczone",
+      "components": [
+        "services-elements.whys-choose-us-card",
+        "services-elements.why-choose-us",
+        "services-elements.service-industries",
+        "services-elements.service-category",
+        "services-elements.hero",
+        "global-elements.transform-business",
+        "global-elements.footer"
+      ]
+    }
+  }
+}
