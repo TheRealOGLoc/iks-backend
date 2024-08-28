@@ -1,7 +1,8 @@
 {
   "collectionName": "components_industry_sector_elements_heroes",
   "info": {
-    "displayName": "Hero"
+    "displayName": "Hero",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -14,12 +15,13 @@
     "buttonText": {
       "type": "string"
     },
-    "image": {
+    "heroBackground": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

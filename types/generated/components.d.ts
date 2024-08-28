@@ -197,12 +197,13 @@ export interface IndustrySectorElementsHero extends Schema.Component {
   collectionName: 'components_industry_sector_elements_heroes';
   info: {
     displayName: 'Hero';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
     buttonText: Attribute.String;
-    image: Attribute.Media<'images'>;
+    heroBackground: Attribute.Media<'images'>;
   };
 }
 
