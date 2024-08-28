@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "industries",
+  "info": {
+    "singularName": "industry",
+    "pluralName": "industries",
+    "displayName": "Industry"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "components": {
+      "type": "dynamiczone",
+      "components": [
+        "industries-elements.hero",
+        "industries-elements.industries",
+        "industries-elements.our-approach",
+        "global-elements.transform-business",
+        "global-elements.footer"
+      ]
+    }
+  }
+}

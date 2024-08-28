@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_industries_elements_our_approaches",
+  "info": {
+    "displayName": "OurApproach"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

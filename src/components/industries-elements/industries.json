@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_industries_elements_industries",
+  "info": {
+    "displayName": "Industries",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titleLeftPart": {
+      "type": "string"
+    },
+    "titleRightPart": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "card": {
+      "displayName": "IndustryCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "industries-elements.industry-card"
+    }
+  }
+}
