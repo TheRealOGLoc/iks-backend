@@ -895,6 +895,46 @@ export interface ApiIndustryIndustry extends Schema.SingleType {
   };
 }
 
+export interface ApiManagementConsultingManagementConsulting
+  extends Schema.SingleType {
+  collectionName: 'management_consultings';
+  info: {
+    singularName: 'management-consulting';
+    pluralName: 'management-consultings';
+    displayName: 'ManagementConsulting';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    components: Attribute.DynamicZone<
+      [
+        'industry-sector-elements.hero',
+        'industry-sector-elements.our-approach',
+        'industry-sector-elements.services',
+        'industry-sector-elements.why-choose-us',
+        'global-elements.transform-business',
+        'global-elements.footer'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::management-consulting.management-consulting',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::management-consulting.management-consulting',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiServiceService extends Schema.SingleType {
   collectionName: 'services';
   info: {
@@ -956,6 +996,7 @@ declare module '@strapi/types' {
       'api::blog.blog': ApiBlogBlog;
       'api::home.home': ApiHomeHome;
       'api::industry.industry': ApiIndustryIndustry;
+      'api::management-consulting.management-consulting': ApiManagementConsultingManagementConsulting;
       'api::service.service': ApiServiceService;
     }
   }

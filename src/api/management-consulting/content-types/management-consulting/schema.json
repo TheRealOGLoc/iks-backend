@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "management_consultings",
+  "info": {
+    "singularName": "management-consulting",
+    "pluralName": "management-consultings",
+    "displayName": "ManagementConsulting"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "components": {
+      "type": "dynamiczone",
+      "components": [
+        "industry-sector-elements.hero",
+        "industry-sector-elements.our-approach",
+        "industry-sector-elements.services",
+        "industry-sector-elements.why-choose-us",
+        "global-elements.transform-business",
+        "global-elements.footer"
+      ]
+    }
+  }
+}

@@ -93,6 +93,119 @@ export interface ServicesElementsHero extends Schema.Component {
   };
 }
 
+export interface IndustrySectorElementsWhyChooseUs extends Schema.Component {
+  collectionName: 'components_industry_sector_elements_why_chooseuses';
+  info: {
+    displayName: 'WhyChooseUs';
+    description: '';
+  };
+  attributes: {
+    titleLeftPart: Attribute.String;
+    titleRightPart: Attribute.String;
+    card: Attribute.Component<
+      'industry-sector-elements.why-choose-us-card',
+      true
+    > &
+      Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+  };
+}
+
+export interface IndustrySectorElementsWhyChooseUsCard
+  extends Schema.Component {
+  collectionName: 'components_industry_sector_elements_why_choose_us_cards';
+  info: {
+    displayName: 'WhyChooseUsCard';
+    description: '';
+  };
+  attributes: {
+    icon: Attribute.Media<'images'>;
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface IndustrySectorElementsServices extends Schema.Component {
+  collectionName: 'components_industry_sector_elements_services';
+  info: {
+    displayName: 'Services';
+    description: '';
+  };
+  attributes: {
+    titleLeftPart: Attribute.String;
+    titleRightPart: Attribute.String;
+    image: Attribute.Media<'images'>;
+    card: Attribute.Component<'industry-sector-elements.service-card', true> &
+      Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+    description: Attribute.Text;
+  };
+}
+
+export interface IndustrySectorElementsServiceCard extends Schema.Component {
+  collectionName: 'components_industry_sector_elements_service_cards';
+  info: {
+    displayName: 'ServiceCard';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    descriptionOne: Attribute.Text;
+    descriptionTwo: Attribute.Text;
+    descriptionThree: Attribute.String;
+  };
+}
+
+export interface IndustrySectorElementsOurApproach extends Schema.Component {
+  collectionName: 'components_industry_sector_elements_our_approaches';
+  info: {
+    displayName: 'OurApproach';
+  };
+  attributes: {
+    titleLeftPart: Attribute.String;
+    titleRightPart: Attribute.String;
+    description: Attribute.Text;
+    card: Attribute.Component<
+      'industry-sector-elements.our-approach-card',
+      true
+    >;
+  };
+}
+
+export interface IndustrySectorElementsOurApproachCard
+  extends Schema.Component {
+  collectionName: 'components_industry_sector_elements_our_approach_cards';
+  info: {
+    displayName: 'OurApproachCard';
+  };
+  attributes: {
+    icon: Attribute.Media<'images'>;
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface IndustrySectorElementsHero extends Schema.Component {
+  collectionName: 'components_industry_sector_elements_heroes';
+  info: {
+    displayName: 'Hero';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    buttonText: Attribute.String;
+    image: Attribute.Media<'images'>;
+  };
+}
+
 export interface IndustriesElementsOurApproach extends Schema.Component {
   collectionName: 'components_industries_elements_our_approaches';
   info: {
@@ -450,6 +563,13 @@ declare module '@strapi/types' {
       'services-elements.service-category': ServicesElementsServiceCategory;
       'services-elements.industry-card': ServicesElementsIndustryCard;
       'services-elements.hero': ServicesElementsHero;
+      'industry-sector-elements.why-choose-us': IndustrySectorElementsWhyChooseUs;
+      'industry-sector-elements.why-choose-us-card': IndustrySectorElementsWhyChooseUsCard;
+      'industry-sector-elements.services': IndustrySectorElementsServices;
+      'industry-sector-elements.service-card': IndustrySectorElementsServiceCard;
+      'industry-sector-elements.our-approach': IndustrySectorElementsOurApproach;
+      'industry-sector-elements.our-approach-card': IndustrySectorElementsOurApproachCard;
+      'industry-sector-elements.hero': IndustrySectorElementsHero;
       'industries-elements.our-approach': IndustriesElementsOurApproach;
       'industries-elements.industry-card': IndustriesElementsIndustryCard;
       'industries-elements.industries': IndustriesElementsIndustries;

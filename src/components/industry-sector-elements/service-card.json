@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_industry_sector_elements_service_cards",
+  "info": {
+    "displayName": "ServiceCard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "descriptionOne": {
+      "type": "text"
+    },
+    "descriptionTwo": {
+      "type": "text"
+    },
+    "descriptionThree": {
+      "type": "string"
+    }
+  }
+}

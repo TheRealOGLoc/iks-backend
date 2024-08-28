@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_industry_sector_elements_our_approaches",
+  "info": {
+    "displayName": "OurApproach"
+  },
+  "options": {},
+  "attributes": {
+    "titleLeftPart": {
+      "type": "string"
+    },
+    "titleRightPart": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "card": {
+      "displayName": "OurApproachCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "industry-sector-elements.our-approach-card"
+    }
+  }
+}
