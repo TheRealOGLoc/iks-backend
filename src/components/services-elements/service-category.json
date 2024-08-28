@@ -22,6 +22,9 @@
     },
     "titleRightPart": {
       "type": "string"
+    },
+    "buttonUrl": {
+      "type": "string"
     }
   }
 }
