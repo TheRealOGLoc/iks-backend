@@ -23,7 +23,7 @@
     "card": {
       "type": "component",
       "repeatable": true,
-      "component": "industry-sector-elements.service-card",
+      "component": "service-sector-elements.service-card",
       "min": 1
     },
     "description": {

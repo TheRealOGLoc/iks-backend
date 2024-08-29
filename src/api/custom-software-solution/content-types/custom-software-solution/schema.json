@@ -1,11 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "management_consultings",
+  "collectionName": "custom_software_solutions",
   "info": {
-    "singularName": "management-consulting",
-    "pluralName": "management-consultings",
-    "displayName": "Management Consulting",
-    "description": ""
+    "singularName": "custom-software-solution",
+    "pluralName": "custom-software-solutions",
+    "displayName": "Custom Software Solution"
   },
   "options": {
     "draftAndPublish": true
@@ -15,8 +14,9 @@
     "components": {
       "type": "dynamiczone",
       "components": [
-        "service-sector-elements.why-choose-us",
         "service-sector-elements.services",
+        "service-sector-elements.why-choose-us",
+        "service-sector-elements.our-process",
         "service-sector-elements.our-approach",
         "service-sector-elements.hero",
         "global-elements.footer",

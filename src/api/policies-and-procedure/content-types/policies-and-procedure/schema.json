@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "management_consultings",
+  "collectionName": "policies_and_procedures",
   "info": {
-    "singularName": "management-consulting",
-    "pluralName": "management-consultings",
-    "displayName": "Management Consulting",
+    "singularName": "policies-and-procedure",
+    "pluralName": "policies-and-procedures",
+    "displayName": "Policies & Procedure",
     "description": ""
   },
   "options": {
@@ -15,12 +15,13 @@
     "components": {
       "type": "dynamiczone",
       "components": [
-        "service-sector-elements.why-choose-us",
         "service-sector-elements.services",
+        "service-sector-elements.why-choose-us",
         "service-sector-elements.our-approach",
         "service-sector-elements.hero",
         "global-elements.footer",
-        "global-elements.transform-business"
+        "global-elements.transform-business",
+        "service-sector-elements.our-process"
       ]
     }
   }

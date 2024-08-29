@@ -821,6 +821,47 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   };
 }
 
+export interface ApiCustomSoftwareSolutionCustomSoftwareSolution
+  extends Schema.SingleType {
+  collectionName: 'custom_software_solutions';
+  info: {
+    singularName: 'custom-software-solution';
+    pluralName: 'custom-software-solutions';
+    displayName: 'Custom Software Solution';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    components: Attribute.DynamicZone<
+      [
+        'service-sector-elements.services',
+        'service-sector-elements.why-choose-us',
+        'service-sector-elements.our-process',
+        'service-sector-elements.our-approach',
+        'service-sector-elements.hero',
+        'global-elements.footer',
+        'global-elements.transform-business'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::custom-software-solution.custom-software-solution',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::custom-software-solution.custom-software-solution',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomeHome extends Schema.SingleType {
   collectionName: 'homes';
   info: {
@@ -901,7 +942,8 @@ export interface ApiManagementConsultingManagementConsulting
   info: {
     singularName: 'management-consulting';
     pluralName: 'management-consultings';
-    displayName: 'ManagementConsulting';
+    displayName: 'Management Consulting';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -909,12 +951,12 @@ export interface ApiManagementConsultingManagementConsulting
   attributes: {
     components: Attribute.DynamicZone<
       [
-        'industry-sector-elements.hero',
-        'industry-sector-elements.our-approach',
-        'industry-sector-elements.services',
-        'industry-sector-elements.why-choose-us',
-        'global-elements.transform-business',
-        'global-elements.footer'
+        'service-sector-elements.why-choose-us',
+        'service-sector-elements.services',
+        'service-sector-elements.our-approach',
+        'service-sector-elements.hero',
+        'global-elements.footer',
+        'global-elements.transform-business'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -928,6 +970,48 @@ export interface ApiManagementConsultingManagementConsulting
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::management-consulting.management-consulting',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPoliciesAndProcedurePoliciesAndProcedure
+  extends Schema.SingleType {
+  collectionName: 'policies_and_procedures';
+  info: {
+    singularName: 'policies-and-procedure';
+    pluralName: 'policies-and-procedures';
+    displayName: 'Policies & Procedure';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    components: Attribute.DynamicZone<
+      [
+        'service-sector-elements.services',
+        'service-sector-elements.why-choose-us',
+        'service-sector-elements.our-approach',
+        'service-sector-elements.hero',
+        'global-elements.footer',
+        'global-elements.transform-business',
+        'service-sector-elements.our-process'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::policies-and-procedure.policies-and-procedure',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::policies-and-procedure.policies-and-procedure',
       'oneToOne',
       'admin::user'
     > &
@@ -994,9 +1078,11 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::blog.blog': ApiBlogBlog;
+      'api::custom-software-solution.custom-software-solution': ApiCustomSoftwareSolutionCustomSoftwareSolution;
       'api::home.home': ApiHomeHome;
       'api::industry.industry': ApiIndustryIndustry;
       'api::management-consulting.management-consulting': ApiManagementConsultingManagementConsulting;
+      'api::policies-and-procedure.policies-and-procedure': ApiPoliciesAndProcedurePoliciesAndProcedure;
       'api::service.service': ApiServiceService;
     }
   }

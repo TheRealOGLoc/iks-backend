@@ -1,19 +1,19 @@
 {
-  "collectionName": "components_industry_sector_elements_our_approach_cards",
+  "collectionName": "components_service_sector_elements_our_process_cards",
   "info": {
-    "displayName": "OurApproachCard"
+    "displayName": "OurProcessCard"
   },
   "options": {},
   "attributes": {
+    "title": {
+      "type": "string"
+    },
     "icon": {
       "allowedTypes": [
         "images"
       ],
       "type": "media",
       "multiple": false
-    },
-    "title": {
-      "type": "string"
     },
     "description": {
       "type": "text"

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_industry_sector_elements_why_chooseuses",
+  "info": {
+    "displayName": "WhyChooseUs",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titleLeftPart": {
+      "type": "string"
+    },
+    "titleRightPart": {
+      "type": "string"
+    },
+    "card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "service-sector-elements.why-choose-us-card",
+      "min": 1
+    }
+  }
+}

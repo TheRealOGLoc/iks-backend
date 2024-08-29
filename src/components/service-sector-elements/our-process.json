@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_industry_sector_elements_why_chooseuses",
+  "collectionName": "components_service_sector_elements_our_processes",
   "info": {
-    "displayName": "WhyChooseUs",
+    "displayName": "OurProcess",
     "description": ""
   },
   "options": {},
@@ -15,8 +15,7 @@
     "card": {
       "type": "component",
       "repeatable": true,
-      "component": "industry-sector-elements.why-choose-us-card",
-      "min": 1
+      "component": "service-sector-elements.our-process-card"
     }
   }
 }

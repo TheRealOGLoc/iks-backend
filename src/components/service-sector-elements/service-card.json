@@ -16,7 +16,7 @@
       "type": "text"
     },
     "descriptionThree": {
-      "type": "string"
+      "type": "text"
     }
   }
 }

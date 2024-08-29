@@ -1,7 +1,8 @@
 {
   "collectionName": "components_industry_sector_elements_our_approaches",
   "info": {
-    "displayName": "OurApproach"
+    "displayName": "OurApproach",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -18,7 +19,7 @@
       "displayName": "OurApproachCard",
       "type": "component",
       "repeatable": true,
-      "component": "industry-sector-elements.our-approach-card"
+      "component": "service-sector-elements.our-approach-card"
     }
   }
 }
