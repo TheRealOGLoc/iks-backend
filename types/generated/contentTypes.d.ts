@@ -827,7 +827,8 @@ export interface ApiCustomSoftwareSolutionCustomSoftwareSolution
   info: {
     singularName: 'custom-software-solution';
     pluralName: 'custom-software-solutions';
-    displayName: 'Custom Software Solution';
+    displayName: 'Service - Custom Software Solution';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -942,7 +943,7 @@ export interface ApiManagementConsultingManagementConsulting
   info: {
     singularName: 'management-consulting';
     pluralName: 'management-consultings';
-    displayName: 'Management Consulting';
+    displayName: 'Service - Management Consulting';
     description: '';
   };
   options: {
@@ -983,7 +984,7 @@ export interface ApiPoliciesAndProcedurePoliciesAndProcedure
   info: {
     singularName: 'policies-and-procedure';
     pluralName: 'policies-and-procedures';
-    displayName: 'Policies & Procedure';
+    displayName: 'Service - Policies & Procedure';
     description: '';
   };
   options: {

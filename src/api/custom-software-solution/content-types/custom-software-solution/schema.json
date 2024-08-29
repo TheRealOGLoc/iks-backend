@@ -4,7 +4,8 @@
   "info": {
     "singularName": "custom-software-solution",
     "pluralName": "custom-software-solutions",
-    "displayName": "Custom Software Solution"
+    "displayName": "Service - Custom Software Solution",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
