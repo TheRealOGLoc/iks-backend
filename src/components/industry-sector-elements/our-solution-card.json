@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_industry_sector_elements_our_solution_cards",
+  "info": {
+    "displayName": "OurSolutionCard"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "beauty_and_aesthetics",
+  "info": {
+    "singularName": "beauty-and-aesthetic",
+    "pluralName": "beauty-and-aesthetics",
+    "displayName": "Industry - Beauty & Aesthetic",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "components": {
+      "type": "dynamiczone",
+      "components": [
+        "industry-sector-elements.hero-section",
+        "industry-sector-elements.our-solution",
+        "industry-sector-elements.pain-point",
+        "global-elements.footer",
+        "global-elements.transform-business"
+      ]
+    }
+  }
+}

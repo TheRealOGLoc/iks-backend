@@ -788,6 +788,46 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiBeautyAndAestheticBeautyAndAesthetic
+  extends Schema.SingleType {
+  collectionName: 'beauty_and_aesthetics';
+  info: {
+    singularName: 'beauty-and-aesthetic';
+    pluralName: 'beauty-and-aesthetics';
+    displayName: 'Industry - Beauty & Aesthetic';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    components: Attribute.DynamicZone<
+      [
+        'industry-sector-elements.hero-section',
+        'industry-sector-elements.our-solution',
+        'industry-sector-elements.pain-point',
+        'global-elements.footer',
+        'global-elements.transform-business'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::beauty-and-aesthetic.beauty-and-aesthetic',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::beauty-and-aesthetic.beauty-and-aesthetic',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBlogBlog extends Schema.CollectionType {
   collectionName: 'blogs';
   info: {
@@ -1078,6 +1118,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::beauty-and-aesthetic.beauty-and-aesthetic': ApiBeautyAndAestheticBeautyAndAesthetic;
       'api::blog.blog': ApiBlogBlog;
       'api::custom-software-solution.custom-software-solution': ApiCustomSoftwareSolutionCustomSoftwareSolution;
       'api::home.home': ApiHomeHome;

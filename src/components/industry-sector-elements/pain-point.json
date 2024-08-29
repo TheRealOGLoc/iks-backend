@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_industry_sector_elements_pain_points",
+  "info": {
+    "displayName": "PainPoint"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "card": {
+      "displayName": "PainPointCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "industry-sector-elements.pain-point-card"
+    }
+  }
+}
