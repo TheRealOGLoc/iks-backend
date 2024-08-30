@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_studies",
+  "info": {
+    "singularName": "case-study",
+    "pluralName": "case-studies",
+    "displayName": "Case Study"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "components": {
+      "type": "dynamiczone",
+      "components": [
+        "blogs-elements.banner",
+        "blogs-elements.blog-content",
+        "blogs-elements.latest-posts",
+        "blogs-elements.leave-reply",
+        "global-elements.footer",
+        "global-elements.transform-business"
+      ]
+    }
+  }
+}

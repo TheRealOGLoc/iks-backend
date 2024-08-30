@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "retails",
+  "info": {
+    "singularName": "retail",
+    "pluralName": "retails",
+    "displayName": "Industry - Retail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "components": {
+      "type": "dynamiczone",
+      "components": [
+        "industry-sector-elements.pain-point",
+        "industry-sector-elements.our-solution",
+        "industry-sector-elements.hero-section",
+        "global-elements.footer",
+        "global-elements.transform-business"
+      ]
+    }
+  }
+}

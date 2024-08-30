@@ -861,6 +861,46 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   };
 }
 
+export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
+  collectionName: 'case_studies';
+  info: {
+    singularName: 'case-study';
+    pluralName: 'case-studies';
+    displayName: 'Case Study';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    components: Attribute.DynamicZone<
+      [
+        'blogs-elements.banner',
+        'blogs-elements.blog-content',
+        'blogs-elements.latest-posts',
+        'blogs-elements.leave-reply',
+        'global-elements.footer',
+        'global-elements.transform-business'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::case-study.case-study',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::case-study.case-study',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCustomSoftwareSolutionCustomSoftwareSolution
   extends Schema.SingleType {
   collectionName: 'custom_software_solutions';
@@ -903,6 +943,46 @@ export interface ApiCustomSoftwareSolutionCustomSoftwareSolution
   };
 }
 
+export interface ApiHealthAndCommunityServiceHealthAndCommunityService
+  extends Schema.SingleType {
+  collectionName: 'health_and_community_services';
+  info: {
+    singularName: 'health-and-community-service';
+    pluralName: 'health-and-community-services';
+    displayName: 'Industry - Health & Community Service';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    components: Attribute.DynamicZone<
+      [
+        'industry-sector-elements.pain-point',
+        'industry-sector-elements.our-solution',
+        'industry-sector-elements.hero-section',
+        'global-elements.footer',
+        'global-elements.transform-business'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::health-and-community-service.health-and-community-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::health-and-community-service.health-and-community-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomeHome extends Schema.SingleType {
   collectionName: 'homes';
   info: {
@@ -935,6 +1015,46 @@ export interface ApiHomeHome extends Schema.SingleType {
     createdBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHospitalityAndTourismHospitalityAndTourism
+  extends Schema.SingleType {
+  collectionName: 'hospitality_and_tourisms';
+  info: {
+    singularName: 'hospitality-and-tourism';
+    pluralName: 'hospitality-and-tourisms';
+    displayName: 'Industry - Hospitality & Tourism';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    components: Attribute.DynamicZone<
+      [
+        'industry-sector-elements.pain-point',
+        'industry-sector-elements.our-solution',
+        'industry-sector-elements.hero-section',
+        'global-elements.transform-business',
+        'global-elements.footer'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hospitality-and-tourism.hospitality-and-tourism',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hospitality-and-tourism.hospitality-and-tourism',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
   };
 }
@@ -1060,6 +1180,45 @@ export interface ApiPoliciesAndProcedurePoliciesAndProcedure
   };
 }
 
+export interface ApiRetailRetail extends Schema.SingleType {
+  collectionName: 'retails';
+  info: {
+    singularName: 'retail';
+    pluralName: 'retails';
+    displayName: 'Industry - Retail';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    components: Attribute.DynamicZone<
+      [
+        'industry-sector-elements.pain-point',
+        'industry-sector-elements.our-solution',
+        'industry-sector-elements.hero-section',
+        'global-elements.footer',
+        'global-elements.transform-business'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::retail.retail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::retail.retail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiServiceService extends Schema.SingleType {
   collectionName: 'services';
   info: {
@@ -1100,6 +1259,45 @@ export interface ApiServiceService extends Schema.SingleType {
   };
 }
 
+export interface ApiTechnologyTechnology extends Schema.SingleType {
+  collectionName: 'technologies';
+  info: {
+    singularName: 'technology';
+    pluralName: 'technologies';
+    displayName: 'Industry - Technology';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    components: Attribute.DynamicZone<
+      [
+        'industry-sector-elements.pain-point',
+        'industry-sector-elements.our-solution',
+        'industry-sector-elements.hero-section',
+        'global-elements.footer',
+        'global-elements.transform-business'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::technology.technology',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::technology.technology',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1120,12 +1318,17 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::beauty-and-aesthetic.beauty-and-aesthetic': ApiBeautyAndAestheticBeautyAndAesthetic;
       'api::blog.blog': ApiBlogBlog;
+      'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::custom-software-solution.custom-software-solution': ApiCustomSoftwareSolutionCustomSoftwareSolution;
+      'api::health-and-community-service.health-and-community-service': ApiHealthAndCommunityServiceHealthAndCommunityService;
       'api::home.home': ApiHomeHome;
+      'api::hospitality-and-tourism.hospitality-and-tourism': ApiHospitalityAndTourismHospitalityAndTourism;
       'api::industry.industry': ApiIndustryIndustry;
       'api::management-consulting.management-consulting': ApiManagementConsultingManagementConsulting;
       'api::policies-and-procedure.policies-and-procedure': ApiPoliciesAndProcedurePoliciesAndProcedure;
+      'api::retail.retail': ApiRetailRetail;
       'api::service.service': ApiServiceService;
+      'api::technology.technology': ApiTechnologyTechnology;
     }
   }
 }
