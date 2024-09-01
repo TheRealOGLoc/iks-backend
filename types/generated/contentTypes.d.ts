@@ -788,6 +788,83 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutUsAboutUs extends Schema.SingleType {
+  collectionName: 'about_uses';
+  info: {
+    singularName: 'about-us';
+    pluralName: 'about-uses';
+    displayName: 'About Us';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    components: Attribute.DynamicZone<
+      [
+        'about-us-elements.hero',
+        'about-us-elements.affiliation',
+        'about-us-elements.showcase',
+        'global-elements.transform-business',
+        'global-elements.footer'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about-us.about-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about-us.about-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAllBlogAllBlog extends Schema.SingleType {
+  collectionName: 'all_blogs';
+  info: {
+    singularName: 'all-blog';
+    pluralName: 'all-blogs';
+    displayName: 'Blogs';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    components: Attribute.DynamicZone<
+      [
+        'all-blogs-elements.hero',
+        'all-blogs-elements.show-all-blogs',
+        'global-elements.footer',
+        'global-elements.transform-business'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::all-blog.all-blog',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::all-blog.all-blog',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBeautyAndAestheticBeautyAndAesthetic
   extends Schema.SingleType {
   collectionName: 'beauty_and_aesthetics';
@@ -907,7 +984,7 @@ export interface ApiCustomSoftwareSolutionCustomSoftwareSolution
   info: {
     singularName: 'custom-software-solution';
     pluralName: 'custom-software-solutions';
-    displayName: 'Service - Custom Software Solution';
+    displayName: 'Service - Custom Software Solutions';
     description: '';
   };
   options: {
@@ -1138,6 +1215,43 @@ export interface ApiManagementConsultingManagementConsulting
   };
 }
 
+export interface ApiOurTeamOurTeam extends Schema.SingleType {
+  collectionName: 'our_teams';
+  info: {
+    singularName: 'our-team';
+    pluralName: 'our-teams';
+    displayName: 'Our Team';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    components: Attribute.DynamicZone<
+      [
+        'team-elements.hero',
+        'team-elements.members',
+        'global-elements.footer',
+        'global-elements.transform-business'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::our-team.our-team',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::our-team.our-team',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPoliciesAndProcedurePoliciesAndProcedure
   extends Schema.SingleType {
   collectionName: 'policies_and_procedures';
@@ -1316,6 +1430,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::all-blog.all-blog': ApiAllBlogAllBlog;
       'api::beauty-and-aesthetic.beauty-and-aesthetic': ApiBeautyAndAestheticBeautyAndAesthetic;
       'api::blog.blog': ApiBlogBlog;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
@@ -1325,6 +1441,7 @@ declare module '@strapi/types' {
       'api::hospitality-and-tourism.hospitality-and-tourism': ApiHospitalityAndTourismHospitalityAndTourism;
       'api::industry.industry': ApiIndustryIndustry;
       'api::management-consulting.management-consulting': ApiManagementConsultingManagementConsulting;
+      'api::our-team.our-team': ApiOurTeamOurTeam;
       'api::policies-and-procedure.policies-and-procedure': ApiPoliciesAndProcedurePoliciesAndProcedure;
       'api::retail.retail': ApiRetailRetail;
       'api::service.service': ApiServiceService;

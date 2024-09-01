@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_about_us_elements_showcases",
+  "info": {
+    "displayName": "Showcase"
+  },
+  "options": {},
+  "attributes": {
+    "card": {
+      "displayName": "ShowcaseCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "about-us-elements.showcase-card",
+      "min": 1
+    }
+  }
+}

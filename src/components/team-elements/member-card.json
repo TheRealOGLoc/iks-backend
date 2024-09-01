@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_team_elements_member_cards",
+  "info": {
+    "displayName": "MemberCard"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "jobTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

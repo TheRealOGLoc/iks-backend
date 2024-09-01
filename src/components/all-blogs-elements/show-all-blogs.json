@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_all_blogs_elements_show_all_blogs",
+  "info": {
+    "displayName": "ShowAllBlogs"
+  },
+  "options": {},
+  "attributes": {
+    "showAllBlogs": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

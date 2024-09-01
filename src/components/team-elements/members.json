@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_team_elements_members",
+  "info": {
+    "displayName": "Members"
+  },
+  "options": {},
+  "attributes": {
+    "card": {
+      "displayName": "MemberCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "team-elements.member-card",
+      "min": 1
+    }
+  }
+}

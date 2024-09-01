@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_about_us_elements_affiliations",
+  "info": {
+    "displayName": "Affiliation"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

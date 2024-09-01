@@ -1,5 +1,47 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface TeamElementsMembers extends Schema.Component {
+  collectionName: 'components_team_elements_members';
+  info: {
+    displayName: 'Members';
+  };
+  attributes: {
+    card: Attribute.Component<'team-elements.member-card', true> &
+      Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+  };
+}
+
+export interface TeamElementsMemberCard extends Schema.Component {
+  collectionName: 'components_team_elements_member_cards';
+  info: {
+    displayName: 'MemberCard';
+  };
+  attributes: {
+    name: Attribute.String;
+    jobTitle: Attribute.String;
+    description: Attribute.Text;
+    image: Attribute.Media<'images'>;
+  };
+}
+
+export interface TeamElementsHero extends Schema.Component {
+  collectionName: 'components_team_elements_heroes';
+  info: {
+    displayName: 'Hero';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    buttonText: Attribute.String;
+    heroBackground: Attribute.Media<'images'>;
+  };
+}
+
 export interface ServicesElementsWhysChooseUsCard extends Schema.Component {
   collectionName: 'components_services_elements_whys_choose_us_cards';
   info: {
@@ -642,9 +684,90 @@ export interface BlogsElementsBanner extends Schema.Component {
   };
 }
 
+export interface AllBlogsElementsShowAllBlogs extends Schema.Component {
+  collectionName: 'components_all_blogs_elements_show_all_blogs';
+  info: {
+    displayName: 'ShowAllBlogs';
+  };
+  attributes: {
+    showAllBlogs: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<true>;
+  };
+}
+
+export interface AllBlogsElementsHero extends Schema.Component {
+  collectionName: 'components_all_blogs_elements_heroes';
+  info: {
+    displayName: 'Hero';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    searchPlaceholder: Attribute.String;
+    heroBackground: Attribute.Media<'images'>;
+  };
+}
+
+export interface AboutUsElementsShowcase extends Schema.Component {
+  collectionName: 'components_about_us_elements_showcases';
+  info: {
+    displayName: 'Showcase';
+  };
+  attributes: {
+    card: Attribute.Component<'about-us-elements.showcase-card', true> &
+      Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+  };
+}
+
+export interface AboutUsElementsShowcaseCard extends Schema.Component {
+  collectionName: 'components_about_us_elements_showcase_cards';
+  info: {
+    displayName: 'ShowcaseCard';
+  };
+  attributes: {
+    image: Attribute.Media<'images'>;
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface AboutUsElementsHero extends Schema.Component {
+  collectionName: 'components_about_us_elements_heroes';
+  info: {
+    displayName: 'Hero';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    buttonText: Attribute.String;
+    heroBackground: Attribute.Media<'images'>;
+  };
+}
+
+export interface AboutUsElementsAffiliation extends Schema.Component {
+  collectionName: 'components_about_us_elements_affiliations';
+  info: {
+    displayName: 'Affiliation';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    images: Attribute.Media<'images', true>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'team-elements.members': TeamElementsMembers;
+      'team-elements.member-card': TeamElementsMemberCard;
+      'team-elements.hero': TeamElementsHero;
       'services-elements.whys-choose-us-card': ServicesElementsWhysChooseUsCard;
       'services-elements.why-choose-us': ServicesElementsWhyChooseUs;
       'services-elements.service-modules': ServicesElementsServiceModules;
@@ -689,6 +812,12 @@ declare module '@strapi/types' {
       'blogs-elements.latest-posts': BlogsElementsLatestPosts;
       'blogs-elements.blog-content': BlogsElementsBlogContent;
       'blogs-elements.banner': BlogsElementsBanner;
+      'all-blogs-elements.show-all-blogs': AllBlogsElementsShowAllBlogs;
+      'all-blogs-elements.hero': AllBlogsElementsHero;
+      'about-us-elements.showcase': AboutUsElementsShowcase;
+      'about-us-elements.showcase-card': AboutUsElementsShowcaseCard;
+      'about-us-elements.hero': AboutUsElementsHero;
+      'about-us-elements.affiliation': AboutUsElementsAffiliation;
     }
   }
 }

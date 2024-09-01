@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_about_us_elements_showcase_cards",
+  "info": {
+    "displayName": "ShowcaseCard"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

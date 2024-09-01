@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "all_blogs",
+  "info": {
+    "singularName": "all-blog",
+    "pluralName": "all-blogs",
+    "displayName": "Blogs",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "components": {
+      "type": "dynamiczone",
+      "components": [
+        "all-blogs-elements.hero",
+        "all-blogs-elements.show-all-blogs",
+        "global-elements.footer",
+        "global-elements.transform-business"
+      ]
+    }
+  }
+}
