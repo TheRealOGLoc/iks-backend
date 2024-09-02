@@ -14,7 +14,8 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "components": {
       "type": "dynamiczone",
@@ -23,9 +24,14 @@
         "blogs-elements.blog-content",
         "blogs-elements.latest-posts",
         "blogs-elements.leave-reply",
-        "global-elements.footer",
-        "global-elements.transform-business"
+        "global-elements.transform-business",
+        "global-elements.footer"
       ]
+    },
+    "slug": {
+      "type": "string",
+      "unique": true,
+      "required": true
     }
   }
 }

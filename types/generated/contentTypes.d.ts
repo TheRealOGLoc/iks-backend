@@ -917,17 +917,18 @@ export interface ApiBlogBlog extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
+    title: Attribute.String & Attribute.Required & Attribute.Unique;
     components: Attribute.DynamicZone<
       [
         'blogs-elements.banner',
         'blogs-elements.blog-content',
         'blogs-elements.latest-posts',
         'blogs-elements.leave-reply',
-        'global-elements.footer',
-        'global-elements.transform-business'
+        'global-elements.transform-business',
+        'global-elements.footer'
       ]
     >;
+    slug: Attribute.String & Attribute.Required & Attribute.Unique;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
