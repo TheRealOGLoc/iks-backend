@@ -135,69 +135,6 @@ export interface ServicesElementsHero extends Schema.Component {
   };
 }
 
-export interface IndustrySectorElementsPainPoint extends Schema.Component {
-  collectionName: 'components_industry_sector_elements_pain_points';
-  info: {
-    displayName: 'PainPoint';
-  };
-  attributes: {
-    title: Attribute.String;
-    card: Attribute.Component<'industry-sector-elements.pain-point-card', true>;
-  };
-}
-
-export interface IndustrySectorElementsPainPointCard extends Schema.Component {
-  collectionName: 'components_industry_sector_elements_pain_point_cards';
-  info: {
-    displayName: 'PainPointCard';
-  };
-  attributes: {
-    icon: Attribute.Media<'images'>;
-    title: Attribute.String;
-    description: Attribute.Text;
-  };
-}
-
-export interface IndustrySectorElementsOurSolution extends Schema.Component {
-  collectionName: 'components_industry_sector_elements_our_solutions';
-  info: {
-    displayName: 'OurSolution';
-  };
-  attributes: {
-    title: Attribute.String;
-    card: Attribute.Component<
-      'industry-sector-elements.our-solution-card',
-      true
-    >;
-  };
-}
-
-export interface IndustrySectorElementsOurSolutionCard
-  extends Schema.Component {
-  collectionName: 'components_industry_sector_elements_our_solution_cards';
-  info: {
-    displayName: 'OurSolutionCard';
-  };
-  attributes: {
-    icon: Attribute.Media<'images'>;
-    title: Attribute.String;
-    description: Attribute.Text;
-  };
-}
-
-export interface IndustrySectorElementsHeroSection extends Schema.Component {
-  collectionName: 'components_industry_sector_elements_hero_sections';
-  info: {
-    displayName: 'HeroSection';
-  };
-  attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    buttonText: Attribute.String;
-    heroBackground: Attribute.Media<'images'>;
-  };
-}
-
 export interface ServiceSectorElementsWhyChooseUs extends Schema.Component {
   collectionName: 'components_industry_sector_elements_why_chooseuses';
   info: {
@@ -328,6 +265,69 @@ export interface ServiceSectorElementsHero extends Schema.Component {
   info: {
     displayName: 'Hero';
     description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    buttonText: Attribute.String;
+    heroBackground: Attribute.Media<'images'>;
+  };
+}
+
+export interface IndustrySectorElementsPainPoint extends Schema.Component {
+  collectionName: 'components_industry_sector_elements_pain_points';
+  info: {
+    displayName: 'PainPoint';
+  };
+  attributes: {
+    title: Attribute.String;
+    card: Attribute.Component<'industry-sector-elements.pain-point-card', true>;
+  };
+}
+
+export interface IndustrySectorElementsPainPointCard extends Schema.Component {
+  collectionName: 'components_industry_sector_elements_pain_point_cards';
+  info: {
+    displayName: 'PainPointCard';
+  };
+  attributes: {
+    icon: Attribute.Media<'images'>;
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface IndustrySectorElementsOurSolution extends Schema.Component {
+  collectionName: 'components_industry_sector_elements_our_solutions';
+  info: {
+    displayName: 'OurSolution';
+  };
+  attributes: {
+    title: Attribute.String;
+    card: Attribute.Component<
+      'industry-sector-elements.our-solution-card',
+      true
+    >;
+  };
+}
+
+export interface IndustrySectorElementsOurSolutionCard
+  extends Schema.Component {
+  collectionName: 'components_industry_sector_elements_our_solution_cards';
+  info: {
+    displayName: 'OurSolutionCard';
+  };
+  attributes: {
+    icon: Attribute.Media<'images'>;
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface IndustrySectorElementsHeroSection extends Schema.Component {
+  collectionName: 'components_industry_sector_elements_hero_sections';
+  info: {
+    displayName: 'HeroSection';
   };
   attributes: {
     title: Attribute.String;
@@ -801,11 +801,6 @@ declare module '@strapi/types' {
       'services-elements.service-category': ServicesElementsServiceCategory;
       'services-elements.industry-card': ServicesElementsIndustryCard;
       'services-elements.hero': ServicesElementsHero;
-      'industry-sector-elements.pain-point': IndustrySectorElementsPainPoint;
-      'industry-sector-elements.pain-point-card': IndustrySectorElementsPainPointCard;
-      'industry-sector-elements.our-solution': IndustrySectorElementsOurSolution;
-      'industry-sector-elements.our-solution-card': IndustrySectorElementsOurSolutionCard;
-      'industry-sector-elements.hero-section': IndustrySectorElementsHeroSection;
       'service-sector-elements.why-choose-us': ServiceSectorElementsWhyChooseUs;
       'service-sector-elements.why-choose-us-card': ServiceSectorElementsWhyChooseUsCard;
       'service-sector-elements.services': ServiceSectorElementsServices;
@@ -815,6 +810,11 @@ declare module '@strapi/types' {
       'service-sector-elements.our-approach': ServiceSectorElementsOurApproach;
       'service-sector-elements.our-approach-card': ServiceSectorElementsOurApproachCard;
       'service-sector-elements.hero': ServiceSectorElementsHero;
+      'industry-sector-elements.pain-point': IndustrySectorElementsPainPoint;
+      'industry-sector-elements.pain-point-card': IndustrySectorElementsPainPointCard;
+      'industry-sector-elements.our-solution': IndustrySectorElementsOurSolution;
+      'industry-sector-elements.our-solution-card': IndustrySectorElementsOurSolutionCard;
+      'industry-sector-elements.hero-section': IndustrySectorElementsHeroSection;
       'industries-elements.our-approach': IndustriesElementsOurApproach;
       'industries-elements.industry-card': IndustriesElementsIndustryCard;
       'industries-elements.industries': IndustriesElementsIndustries;
