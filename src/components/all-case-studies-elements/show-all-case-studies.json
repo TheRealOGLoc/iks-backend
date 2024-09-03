@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_all_case_studies_elements_show_all_case_studies",
+  "info": {
+    "displayName": "ShowAllCaseStudies"
+  },
+  "options": {},
+  "attributes": {
+    "showAllCaseStudies": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

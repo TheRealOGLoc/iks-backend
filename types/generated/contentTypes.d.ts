@@ -865,6 +865,44 @@ export interface ApiAllBlogAllBlog extends Schema.SingleType {
   };
 }
 
+export interface ApiAllCaseStudyAllCaseStudy extends Schema.SingleType {
+  collectionName: 'all_case_studies';
+  info: {
+    singularName: 'all-case-study';
+    pluralName: 'all-case-studies';
+    displayName: 'Case Studies';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    components: Attribute.DynamicZone<
+      [
+        'all-case-studies-elements.hero',
+        'all-case-studies-elements.show-all-case-studies',
+        'global-elements.transform-business',
+        'global-elements.footer'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::all-case-study.all-case-study',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::all-case-study.all-case-study',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBeautyAndAestheticBeautyAndAesthetic
   extends Schema.SingleType {
   collectionName: 'beauty_and_aesthetics';
@@ -945,6 +983,7 @@ export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
     singularName: 'case-study';
     pluralName: 'case-studies';
     displayName: 'Case Study';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -961,6 +1000,7 @@ export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
         'global-elements.transform-business'
       ]
     >;
+    slug: Attribute.String & Attribute.Required & Attribute.Unique;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1433,6 +1473,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::all-blog.all-blog': ApiAllBlogAllBlog;
+      'api::all-case-study.all-case-study': ApiAllCaseStudyAllCaseStudy;
       'api::beauty-and-aesthetic.beauty-and-aesthetic': ApiBeautyAndAestheticBeautyAndAesthetic;
       'api::blog.blog': ApiBlogBlog;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;

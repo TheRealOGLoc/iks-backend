@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "all_case_studies",
+  "info": {
+    "singularName": "all-case-study",
+    "pluralName": "all-case-studies",
+    "displayName": "Case Studies",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "components": {
+      "type": "dynamiczone",
+      "components": [
+        "all-case-studies-elements.hero",
+        "all-case-studies-elements.show-all-case-studies",
+        "global-elements.transform-business",
+        "global-elements.footer"
+      ]
+    }
+  }
+}
