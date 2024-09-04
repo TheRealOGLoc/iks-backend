@@ -274,6 +274,7 @@ export interface ServiceSectorElementsHero extends Schema.Component {
     buttonText: Attribute.String;
     heroBackground: Attribute.Media<'images'>;
     mobileViewBackground: Attribute.Media<'images'>;
+    mobileViewDescription: Attribute.Text;
   };
 }
 
@@ -339,6 +340,63 @@ export interface IndustrySectorElementsHeroSection extends Schema.Component {
     buttonText: Attribute.String;
     heroBackground: Attribute.Media<'images'>;
     mobileViewBackground: Attribute.Media<'images'>;
+  };
+}
+
+export interface IndustriesElementsOurApproach extends Schema.Component {
+  collectionName: 'components_industries_elements_our_approaches';
+  info: {
+    displayName: 'OurApproach';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface IndustriesElementsIndustryCard extends Schema.Component {
+  collectionName: 'components_industries_elements_industry_cards';
+  info: {
+    displayName: 'IndustryCard';
+    description: '';
+  };
+  attributes: {
+    image: Attribute.Media<'images'>;
+    title: Attribute.String;
+    description: Attribute.Text;
+    buttonText: Attribute.String;
+    buttonUrl: Attribute.String;
+    showButton: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<true>;
+  };
+}
+
+export interface IndustriesElementsIndustries extends Schema.Component {
+  collectionName: 'components_industries_elements_industries';
+  info: {
+    displayName: 'Industries';
+    description: '';
+  };
+  attributes: {
+    titleLeftPart: Attribute.String;
+    titleRightPart: Attribute.String;
+    description: Attribute.Text;
+    card: Attribute.Component<'industries-elements.industry-card', true>;
+  };
+}
+
+export interface IndustriesElementsHero extends Schema.Component {
+  collectionName: 'components_industries_elements_heroes';
+  info: {
+    displayName: 'Hero';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    buttonText: Attribute.String;
+    heroBackground: Attribute.Media<'images'>;
   };
 }
 
@@ -572,63 +630,6 @@ export interface GlobalElementsAlign extends Schema.Component {
   };
 }
 
-export interface IndustriesElementsOurApproach extends Schema.Component {
-  collectionName: 'components_industries_elements_our_approaches';
-  info: {
-    displayName: 'OurApproach';
-  };
-  attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-  };
-}
-
-export interface IndustriesElementsIndustryCard extends Schema.Component {
-  collectionName: 'components_industries_elements_industry_cards';
-  info: {
-    displayName: 'IndustryCard';
-    description: '';
-  };
-  attributes: {
-    image: Attribute.Media<'images'>;
-    title: Attribute.String;
-    description: Attribute.Text;
-    buttonText: Attribute.String;
-    buttonUrl: Attribute.String;
-    showButton: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<true>;
-  };
-}
-
-export interface IndustriesElementsIndustries extends Schema.Component {
-  collectionName: 'components_industries_elements_industries';
-  info: {
-    displayName: 'Industries';
-    description: '';
-  };
-  attributes: {
-    titleLeftPart: Attribute.String;
-    titleRightPart: Attribute.String;
-    description: Attribute.Text;
-    card: Attribute.Component<'industries-elements.industry-card', true>;
-  };
-}
-
-export interface IndustriesElementsHero extends Schema.Component {
-  collectionName: 'components_industries_elements_heroes';
-  info: {
-    displayName: 'Hero';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    buttonText: Attribute.String;
-    heroBackground: Attribute.Media<'images'>;
-  };
-}
-
 export interface BlogsElementsLeaveReply extends Schema.Component {
   collectionName: 'components_blogs_elements_leave_replies';
   info: {
@@ -823,6 +824,10 @@ declare module '@strapi/types' {
       'industry-sector-elements.our-solution': IndustrySectorElementsOurSolution;
       'industry-sector-elements.our-solution-card': IndustrySectorElementsOurSolutionCard;
       'industry-sector-elements.hero-section': IndustrySectorElementsHeroSection;
+      'industries-elements.our-approach': IndustriesElementsOurApproach;
+      'industries-elements.industry-card': IndustriesElementsIndustryCard;
+      'industries-elements.industries': IndustriesElementsIndustries;
+      'industries-elements.hero': IndustriesElementsHero;
       'homepage-elements.why-us': HomepageElementsWhyUs;
       'homepage-elements.why-us-card': HomepageElementsWhyUsCard;
       'homepage-elements.solutions': HomepageElementsSolutions;
@@ -838,10 +843,6 @@ declare module '@strapi/types' {
       'global-elements.transform-business': GlobalElementsTransformBusiness;
       'global-elements.footer': GlobalElementsFooter;
       'global-elements.align': GlobalElementsAlign;
-      'industries-elements.our-approach': IndustriesElementsOurApproach;
-      'industries-elements.industry-card': IndustriesElementsIndustryCard;
-      'industries-elements.industries': IndustriesElementsIndustries;
-      'industries-elements.hero': IndustriesElementsHero;
       'blogs-elements.leave-reply': BlogsElementsLeaveReply;
       'blogs-elements.latest-posts': BlogsElementsLatestPosts;
       'blogs-elements.blog-content': BlogsElementsBlogContent;
