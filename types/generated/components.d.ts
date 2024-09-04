@@ -281,18 +281,21 @@ export interface ServiceSectorElementsHero extends Schema.Component {
 export interface IndustrySectorElementsPainPoint extends Schema.Component {
   collectionName: 'components_industry_sector_elements_pain_points';
   info: {
-    displayName: 'PainPoint';
+    displayName: 'OurApproach';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     card: Attribute.Component<'industry-sector-elements.pain-point-card', true>;
+    description: Attribute.Text;
   };
 }
 
 export interface IndustrySectorElementsPainPointCard extends Schema.Component {
   collectionName: 'components_industry_sector_elements_pain_point_cards';
   info: {
-    displayName: 'PainPointCard';
+    displayName: 'ApproachCard';
+    description: '';
   };
   attributes: {
     icon: Attribute.Media<'images'>;
@@ -340,6 +343,7 @@ export interface IndustrySectorElementsHeroSection extends Schema.Component {
     buttonText: Attribute.String;
     heroBackground: Attribute.Media<'images'>;
     mobileViewBackground: Attribute.Media<'images'>;
+    mobileViewDescription: Attribute.Text;
   };
 }
 
@@ -397,6 +401,7 @@ export interface IndustriesElementsHero extends Schema.Component {
     description: Attribute.Text;
     buttonText: Attribute.String;
     heroBackground: Attribute.Media<'images'>;
+    mobileViewBackground: Attribute.Media<'images'>;
   };
 }
 
