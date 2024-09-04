@@ -23,6 +23,13 @@
     "buttonText": {
       "type": "string",
       "default": "Explore More"
+    },
+    "mobileViewImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

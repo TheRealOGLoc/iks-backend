@@ -1,7 +1,8 @@
 {
   "collectionName": "components_industry_sector_elements_hero_sections",
   "info": {
-    "displayName": "HeroSection"
+    "displayName": "HeroSection",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -15,6 +16,14 @@
       "type": "string"
     },
     "heroBackground": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "mobileViewBackground": {
       "allowedTypes": [
         "images"
       ],

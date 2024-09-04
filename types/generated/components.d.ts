@@ -105,6 +105,7 @@ export interface ServicesElementsServiceCategory extends Schema.Component {
     modules: Attribute.Component<'services-elements.service-modules', true>;
     titleRightPart: Attribute.String;
     buttonUrl: Attribute.String;
+    mobileViewImage: Attribute.Media<'images'>;
   };
 }
 
@@ -132,6 +133,7 @@ export interface ServicesElementsHero extends Schema.Component {
     heroBackground: Attribute.Media<'images'>;
     description: Attribute.Text;
     buttonText: Attribute.String;
+    mobileViewBackground: Attribute.Media<'images'>;
   };
 }
 
@@ -271,6 +273,7 @@ export interface ServiceSectorElementsHero extends Schema.Component {
     description: Attribute.Text;
     buttonText: Attribute.String;
     heroBackground: Attribute.Media<'images'>;
+    mobileViewBackground: Attribute.Media<'images'>;
   };
 }
 
@@ -328,62 +331,6 @@ export interface IndustrySectorElementsHeroSection extends Schema.Component {
   collectionName: 'components_industry_sector_elements_hero_sections';
   info: {
     displayName: 'HeroSection';
-  };
-  attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    buttonText: Attribute.String;
-    heroBackground: Attribute.Media<'images'>;
-  };
-}
-
-export interface IndustriesElementsOurApproach extends Schema.Component {
-  collectionName: 'components_industries_elements_our_approaches';
-  info: {
-    displayName: 'OurApproach';
-  };
-  attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-  };
-}
-
-export interface IndustriesElementsIndustryCard extends Schema.Component {
-  collectionName: 'components_industries_elements_industry_cards';
-  info: {
-    displayName: 'IndustryCard';
-    description: '';
-  };
-  attributes: {
-    image: Attribute.Media<'images'>;
-    title: Attribute.String;
-    description: Attribute.Text;
-    buttonText: Attribute.String;
-    buttonUrl: Attribute.String;
-    showButton: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<true>;
-  };
-}
-
-export interface IndustriesElementsIndustries extends Schema.Component {
-  collectionName: 'components_industries_elements_industries';
-  info: {
-    displayName: 'Industries';
-    description: '';
-  };
-  attributes: {
-    titleLeftPart: Attribute.String;
-    titleRightPart: Attribute.String;
-    description: Attribute.Text;
-    card: Attribute.Component<'industries-elements.industry-card', true>;
-  };
-}
-
-export interface IndustriesElementsHero extends Schema.Component {
-  collectionName: 'components_industries_elements_heroes';
-  info: {
-    displayName: 'Hero';
     description: '';
   };
   attributes: {
@@ -391,73 +338,7 @@ export interface IndustriesElementsHero extends Schema.Component {
     description: Attribute.Text;
     buttonText: Attribute.String;
     heroBackground: Attribute.Media<'images'>;
-  };
-}
-
-export interface GlobalElementsTransformBusiness extends Schema.Component {
-  collectionName: 'components_global_elements_transform_businesses';
-  info: {
-    displayName: 'TransformBusiness';
-    description: '';
-  };
-  attributes: {
-    titleLeftPart: Attribute.String & Attribute.DefaultTo<'Ready to'>;
-    titleRightPart: Attribute.String &
-      Attribute.DefaultTo<'Transform Your Business?'>;
-    description: Attribute.Text &
-      Attribute.DefaultTo<"Ready to Transform Your Business? Don't wait; take the first step towards achieving your business goals. Contact us today to discuss how we can help you achieve lasting success.">;
-    buttonTextTouch: Attribute.String & Attribute.DefaultTo<'Get in Touch'>;
-    buttonTextExplore: Attribute.String & Attribute.DefaultTo<'Explore More'>;
-    image: Attribute.Media<'images'>;
-  };
-}
-
-export interface GlobalElementsFooter extends Schema.Component {
-  collectionName: 'components_global_elements_footers';
-  info: {
-    displayName: 'Footer';
-    description: '';
-  };
-  attributes: {
-    companyName: Attribute.String & Attribute.DefaultTo<'Infinikey Solutions'>;
-    companyDescription: Attribute.Text &
-      Attribute.DefaultTo<'We bring the years, global experience, and stamina to guide our clients through new and often disruptive realities.'>;
-    emailPlaceHolder: Attribute.String &
-      Attribute.DefaultTo<'Enter your email'>;
-    buttonText: Attribute.String & Attribute.DefaultTo<'Subscribe'>;
-    menuLabel: Attribute.String & Attribute.DefaultTo<'Menu'>;
-    menuHome: Attribute.String & Attribute.DefaultTo<'Home'>;
-    menuCaseStudies: Attribute.String & Attribute.DefaultTo<'Case studies'>;
-    menuFeatures: Attribute.String & Attribute.DefaultTo<'Features'>;
-    menuDownloads: Attribute.String & Attribute.DefaultTo<'Downloads'>;
-    menuBlogs: Attribute.String & Attribute.DefaultTo<'Blogs'>;
-    companyLabel: Attribute.String & Attribute.DefaultTo<'Company'>;
-    companyAbout: Attribute.String & Attribute.DefaultTo<'About'>;
-    companyContactUs: Attribute.String & Attribute.DefaultTo<'Contact us'>;
-    companyCareers: Attribute.String & Attribute.DefaultTo<'Careers'>;
-    companyHelpCenter: Attribute.String & Attribute.DefaultTo<'Help Center'>;
-    companySupport: Attribute.String & Attribute.DefaultTo<'Support'>;
-    locationLabel: Attribute.String & Attribute.DefaultTo<'Location'>;
-    locationAddress: Attribute.Text &
-      Attribute.DefaultTo<'SYDNEY, AUSTRALIA Level 14, 32 Smith Road\u2028Paramatta NSW 2150'>;
-    phoneLabel: Attribute.String & Attribute.DefaultTo<'Phone'>;
-    phoneNumber: Attribute.String & Attribute.DefaultTo<'02 9139 8874'>;
-    mailLabel: Attribute.String & Attribute.DefaultTo<'Mail'>;
-    mailAddress: Attribute.String &
-      Attribute.DefaultTo<'info@infinikeysolutions.com.au'>;
-  };
-}
-
-export interface GlobalElementsAlign extends Schema.Component {
-  collectionName: 'components_homepage_elements_aligns';
-  info: {
-    displayName: 'Align';
-    description: '';
-  };
-  attributes: {
-    titleLeftPart: Attribute.String;
-    titleRightPart: Attribute.String;
-    description: Attribute.Text;
+    mobileViewBackground: Attribute.Media<'images'>;
   };
 }
 
@@ -536,6 +417,7 @@ export interface HomepageElementsServiceCard extends Schema.Component {
     title: Attribute.String;
     description: Attribute.Text;
     buttonText: Attribute.String & Attribute.DefaultTo<'Explore More'>;
+    mobileViewImage: Attribute.Media<'images'>;
   };
 }
 
@@ -570,6 +452,7 @@ export interface HomepageElementsHero extends Schema.Component {
   collectionName: 'components_homepage_elements_heroes';
   info: {
     displayName: 'Hero';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
@@ -578,6 +461,7 @@ export interface HomepageElementsHero extends Schema.Component {
     buttonText: Attribute.String;
     buttonUrl: Attribute.String;
     heroBackground: Attribute.Media<'images'>;
+    mobileViewDescription: Attribute.Text;
   };
 }
 
@@ -618,6 +502,130 @@ export interface HomepageElementsCaseStudies extends Schema.Component {
     description: Attribute.Text;
     buttonText: Attribute.String;
     card: Attribute.Component<'homepage-elements.case-study-card'>;
+  };
+}
+
+export interface GlobalElementsTransformBusiness extends Schema.Component {
+  collectionName: 'components_global_elements_transform_businesses';
+  info: {
+    displayName: 'TransformBusiness';
+    description: '';
+  };
+  attributes: {
+    titleLeftPart: Attribute.String & Attribute.DefaultTo<'Ready to'>;
+    titleRightPart: Attribute.String &
+      Attribute.DefaultTo<'Transform Your Business?'>;
+    description: Attribute.Text &
+      Attribute.DefaultTo<"Ready to Transform Your Business? Don't wait; take the first step towards achieving your business goals. Contact us today to discuss how we can help you achieve lasting success.">;
+    buttonTextTouch: Attribute.String & Attribute.DefaultTo<'Get in Touch'>;
+    buttonTextExplore: Attribute.String & Attribute.DefaultTo<'Explore More'>;
+    image: Attribute.Media<'images'>;
+  };
+}
+
+export interface GlobalElementsFooter extends Schema.Component {
+  collectionName: 'components_global_elements_footers';
+  info: {
+    displayName: 'Footer';
+    description: '';
+  };
+  attributes: {
+    companyName: Attribute.String & Attribute.DefaultTo<'Infinikey Solutions'>;
+    companyDescription: Attribute.Text &
+      Attribute.DefaultTo<'We bring the years, global experience, and stamina to guide our clients through new and often disruptive realities.'>;
+    emailPlaceHolder: Attribute.String &
+      Attribute.DefaultTo<'Enter your email'>;
+    buttonText: Attribute.String & Attribute.DefaultTo<'Subscribe'>;
+    menuLabel: Attribute.String & Attribute.DefaultTo<'Menu'>;
+    menuHome: Attribute.String & Attribute.DefaultTo<'Home'>;
+    menuCaseStudies: Attribute.String & Attribute.DefaultTo<'Case studies'>;
+    menuFeatures: Attribute.String & Attribute.DefaultTo<'Features'>;
+    menuDownloads: Attribute.String & Attribute.DefaultTo<'Downloads'>;
+    menuBlogs: Attribute.String & Attribute.DefaultTo<'Blogs'>;
+    companyLabel: Attribute.String & Attribute.DefaultTo<'Company'>;
+    companyAbout: Attribute.String & Attribute.DefaultTo<'About'>;
+    companyContactUs: Attribute.String & Attribute.DefaultTo<'Contact us'>;
+    companyCareers: Attribute.String & Attribute.DefaultTo<'Careers'>;
+    companyHelpCenter: Attribute.String & Attribute.DefaultTo<'Help Center'>;
+    companySupport: Attribute.String & Attribute.DefaultTo<'Support'>;
+    locationLabel: Attribute.String & Attribute.DefaultTo<'Location'>;
+    locationAddress: Attribute.Text &
+      Attribute.DefaultTo<'SYDNEY, AUSTRALIA Level 14, 32 Smith Road\u2028Paramatta NSW 2150'>;
+    phoneLabel: Attribute.String & Attribute.DefaultTo<'Phone'>;
+    phoneNumber: Attribute.String & Attribute.DefaultTo<'02 9139 8874'>;
+    mailLabel: Attribute.String & Attribute.DefaultTo<'Mail'>;
+    mailAddress: Attribute.String &
+      Attribute.DefaultTo<'info@infinikeysolutions.com.au'>;
+  };
+}
+
+export interface GlobalElementsAlign extends Schema.Component {
+  collectionName: 'components_homepage_elements_aligns';
+  info: {
+    displayName: 'Align';
+    description: '';
+  };
+  attributes: {
+    titleLeftPart: Attribute.String;
+    titleRightPart: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface IndustriesElementsOurApproach extends Schema.Component {
+  collectionName: 'components_industries_elements_our_approaches';
+  info: {
+    displayName: 'OurApproach';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface IndustriesElementsIndustryCard extends Schema.Component {
+  collectionName: 'components_industries_elements_industry_cards';
+  info: {
+    displayName: 'IndustryCard';
+    description: '';
+  };
+  attributes: {
+    image: Attribute.Media<'images'>;
+    title: Attribute.String;
+    description: Attribute.Text;
+    buttonText: Attribute.String;
+    buttonUrl: Attribute.String;
+    showButton: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<true>;
+  };
+}
+
+export interface IndustriesElementsIndustries extends Schema.Component {
+  collectionName: 'components_industries_elements_industries';
+  info: {
+    displayName: 'Industries';
+    description: '';
+  };
+  attributes: {
+    titleLeftPart: Attribute.String;
+    titleRightPart: Attribute.String;
+    description: Attribute.Text;
+    card: Attribute.Component<'industries-elements.industry-card', true>;
+  };
+}
+
+export interface IndustriesElementsHero extends Schema.Component {
+  collectionName: 'components_industries_elements_heroes';
+  info: {
+    displayName: 'Hero';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    buttonText: Attribute.String;
+    heroBackground: Attribute.Media<'images'>;
   };
 }
 
@@ -815,13 +823,6 @@ declare module '@strapi/types' {
       'industry-sector-elements.our-solution': IndustrySectorElementsOurSolution;
       'industry-sector-elements.our-solution-card': IndustrySectorElementsOurSolutionCard;
       'industry-sector-elements.hero-section': IndustrySectorElementsHeroSection;
-      'industries-elements.our-approach': IndustriesElementsOurApproach;
-      'industries-elements.industry-card': IndustriesElementsIndustryCard;
-      'industries-elements.industries': IndustriesElementsIndustries;
-      'industries-elements.hero': IndustriesElementsHero;
-      'global-elements.transform-business': GlobalElementsTransformBusiness;
-      'global-elements.footer': GlobalElementsFooter;
-      'global-elements.align': GlobalElementsAlign;
       'homepage-elements.why-us': HomepageElementsWhyUs;
       'homepage-elements.why-us-card': HomepageElementsWhyUsCard;
       'homepage-elements.solutions': HomepageElementsSolutions;
@@ -834,6 +835,13 @@ declare module '@strapi/types' {
       'homepage-elements.clients': HomepageElementsClients;
       'homepage-elements.case-study-card': HomepageElementsCaseStudyCard;
       'homepage-elements.case-studies': HomepageElementsCaseStudies;
+      'global-elements.transform-business': GlobalElementsTransformBusiness;
+      'global-elements.footer': GlobalElementsFooter;
+      'global-elements.align': GlobalElementsAlign;
+      'industries-elements.our-approach': IndustriesElementsOurApproach;
+      'industries-elements.industry-card': IndustriesElementsIndustryCard;
+      'industries-elements.industries': IndustriesElementsIndustries;
+      'industries-elements.hero': IndustriesElementsHero;
       'blogs-elements.leave-reply': BlogsElementsLeaveReply;
       'blogs-elements.latest-posts': BlogsElementsLatestPosts;
       'blogs-elements.blog-content': BlogsElementsBlogContent;

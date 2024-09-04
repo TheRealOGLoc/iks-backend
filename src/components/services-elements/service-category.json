@@ -25,6 +25,13 @@
     },
     "buttonUrl": {
       "type": "string"
+    },
+    "mobileViewImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
