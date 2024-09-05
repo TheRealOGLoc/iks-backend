@@ -18,7 +18,15 @@
       "type": "string",
       "default": "Search"
     },
-    "image": {
+    "heroBackground": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "mobileViewBackground": {
       "allowedTypes": [
         "images"
       ],

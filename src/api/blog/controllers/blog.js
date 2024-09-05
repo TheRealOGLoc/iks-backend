@@ -15,6 +15,7 @@ module.exports = createCoreController('api::blog.blog', ({strapi}) => ({
         components: {
           populate: {
             heroBackground: "*", // Populate the hero background image
+            mobileViewBackground: "*",
             card: { // Ensure "card" is correctly populated
               populate: ["icon", "image"], // Populate each card's icon in the Solutions component
             },

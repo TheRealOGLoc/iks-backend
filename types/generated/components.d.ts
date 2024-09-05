@@ -694,7 +694,8 @@ export interface BlogsElementsBanner extends Schema.Component {
     description: Attribute.String &
       Attribute.DefaultTo<'Our take on everything that makes a business thrive or struggle.'>;
     searchPlaceholder: Attribute.String & Attribute.DefaultTo<'Search'>;
-    image: Attribute.Media<'images'>;
+    heroBackground: Attribute.Media<'images'>;
+    mobileViewBackground: Attribute.Media<'images'>;
   };
 }
 
@@ -715,12 +716,14 @@ export interface AllCaseStudiesElementsHero extends Schema.Component {
   collectionName: 'components_all_case_studies_elements_heroes';
   info: {
     displayName: 'Hero';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
     searchPlaceholder: Attribute.String;
     heroBackground: Attribute.Media<'images'>;
+    mobileViewBackground: Attribute.Media<'images'>;
   };
 }
 
@@ -740,12 +743,14 @@ export interface AllBlogsElementsHero extends Schema.Component {
   collectionName: 'components_all_blogs_elements_heroes';
   info: {
     displayName: 'Hero';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
     searchPlaceholder: Attribute.String;
     heroBackground: Attribute.Media<'images'>;
+    mobileViewBackground: Attribute.Media<'images'>;
   };
 }
 
