@@ -1,7 +1,8 @@
 {
   "collectionName": "components_about_us_elements_heroes",
   "info": {
-    "displayName": "Hero"
+    "displayName": "Hero",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -15,11 +16,20 @@
       "type": "string"
     },
     "heroBackground": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
+      ]
+    },
+    "mobileViewBackground": {
       "type": "media",
-      "multiple": false
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

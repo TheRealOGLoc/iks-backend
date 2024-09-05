@@ -74,9 +74,9 @@
       "type": "string",
       "default": "Location"
     },
-    "locationAddress": {
+    "locationAddressLineOne": {
       "type": "text",
-      "default": "SYDNEY, AUSTRALIA Level 14, 32 Smith Road Paramatta NSW 2150"
+      "default": "SYDNEY, AUSTRALIA"
     },
     "phoneLabel": {
       "type": "string",
@@ -93,6 +93,10 @@
     "mailAddress": {
       "type": "string",
       "default": "info@infinikeysolutions.com.au"
+    },
+    "locationAddressLineTwo": {
+      "type": "text",
+      "default": "Level 14, 32 Smith Road Paramatta NSW 2150"
     }
   }
 }

@@ -33,12 +33,14 @@ export interface TeamElementsHero extends Schema.Component {
   collectionName: 'components_team_elements_heroes';
   info: {
     displayName: 'Hero';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
     buttonText: Attribute.String;
     heroBackground: Attribute.Media<'images'>;
+    mobileViewBackground: Attribute.Media<'images'>;
   };
 }
 
@@ -612,13 +614,15 @@ export interface GlobalElementsFooter extends Schema.Component {
     companyHelpCenter: Attribute.String & Attribute.DefaultTo<'Help Center'>;
     companySupport: Attribute.String & Attribute.DefaultTo<'Support'>;
     locationLabel: Attribute.String & Attribute.DefaultTo<'Location'>;
-    locationAddress: Attribute.Text &
-      Attribute.DefaultTo<'SYDNEY, AUSTRALIA Level 14, 32 Smith Road\u2028Paramatta NSW 2150'>;
+    locationAddressLineOne: Attribute.Text &
+      Attribute.DefaultTo<'SYDNEY, AUSTRALIA'>;
     phoneLabel: Attribute.String & Attribute.DefaultTo<'Phone'>;
     phoneNumber: Attribute.String & Attribute.DefaultTo<'02 9139 8874'>;
     mailLabel: Attribute.String & Attribute.DefaultTo<'Mail'>;
     mailAddress: Attribute.String &
       Attribute.DefaultTo<'info@infinikeysolutions.com.au'>;
+    locationAddressLineTwo: Attribute.Text &
+      Attribute.DefaultTo<'Level 14, 32 Smith Road\u2028Paramatta NSW 2150'>;
   };
 }
 
@@ -786,12 +790,14 @@ export interface AboutUsElementsHero extends Schema.Component {
   collectionName: 'components_about_us_elements_heroes';
   info: {
     displayName: 'Hero';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
     buttonText: Attribute.String;
     heroBackground: Attribute.Media<'images'>;
+    mobileViewBackground: Attribute.Media<'images'>;
   };
 }
 
