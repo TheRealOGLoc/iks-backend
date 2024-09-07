@@ -14,12 +14,14 @@
     "title": {
       "type": "component",
       "repeatable": false,
-      "component": "global-elements.title"
+      "component": "global-elements.title",
+      "required": true
     },
-    "chatset": {
+    "chartset": {
       "type": "component",
       "repeatable": false,
-      "component": "global-elements.meta-charset"
+      "component": "global-elements.meta-charset",
+      "required": true
     },
     "canonical": {
       "type": "component",

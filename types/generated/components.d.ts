@@ -606,8 +606,9 @@ export interface GlobalElementsSeo extends Schema.Component {
   };
   attributes: {
     metaTag: Attribute.Component<'global-elements.meta-tag', true>;
-    title: Attribute.Component<'global-elements.title'>;
-    chatset: Attribute.Component<'global-elements.meta-charset'>;
+    title: Attribute.Component<'global-elements.title'> & Attribute.Required;
+    chartset: Attribute.Component<'global-elements.meta-charset'> &
+      Attribute.Required;
     canonical: Attribute.Component<'global-elements.canonical-tag', true>;
   };
 }
