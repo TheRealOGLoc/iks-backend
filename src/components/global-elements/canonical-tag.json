@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_global_elements_canonical_tags",
+  "info": {
+    "displayName": "CanonicalTag"
+  },
+  "options": {},
+  "attributes": {
+    "rel": {
+      "type": "string"
+    },
+    "href": {
+      "type": "text"
+    }
+  }
+}

@@ -588,6 +588,53 @@ export interface GlobalElementsTransformBusiness extends Schema.Component {
   };
 }
 
+export interface GlobalElementsTitle extends Schema.Component {
+  collectionName: 'components_global_elements_titles';
+  info: {
+    displayName: 'Title';
+  };
+  attributes: {
+    title: Attribute.String;
+  };
+}
+
+export interface GlobalElementsSeo extends Schema.Component {
+  collectionName: 'components_global_elements_seos';
+  info: {
+    displayName: 'SEO';
+    description: '';
+  };
+  attributes: {
+    metaTag: Attribute.Component<'global-elements.meta-tag', true>;
+    title: Attribute.Component<'global-elements.title'>;
+    chatset: Attribute.Component<'global-elements.meta-charset'>;
+    canonical: Attribute.Component<'global-elements.canonical-tag', true>;
+  };
+}
+
+export interface GlobalElementsMetaTag extends Schema.Component {
+  collectionName: 'components_global_elements_meta_tags';
+  info: {
+    displayName: 'metaTag';
+    description: '';
+  };
+  attributes: {
+    attribute: Attribute.String & Attribute.Required;
+    content: Attribute.Text & Attribute.Required;
+    attributeName: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface GlobalElementsMetaCharset extends Schema.Component {
+  collectionName: 'components_global_elements_meta_charsets';
+  info: {
+    displayName: 'metaCharset';
+  };
+  attributes: {
+    attribute: Attribute.String;
+  };
+}
+
 export interface GlobalElementsFooter extends Schema.Component {
   collectionName: 'components_global_elements_footers';
   info: {
@@ -623,6 +670,17 @@ export interface GlobalElementsFooter extends Schema.Component {
       Attribute.DefaultTo<'info@infinikeysolutions.com.au'>;
     locationAddressLineTwo: Attribute.Text &
       Attribute.DefaultTo<'Level 14, 32 Smith Road\u2028Paramatta NSW 2150'>;
+  };
+}
+
+export interface GlobalElementsCanonicalTag extends Schema.Component {
+  collectionName: 'components_global_elements_canonical_tags';
+  info: {
+    displayName: 'CanonicalTag';
+  };
+  attributes: {
+    rel: Attribute.String;
+    href: Attribute.Text;
   };
 }
 
@@ -857,7 +915,12 @@ declare module '@strapi/types' {
       'homepage-elements.case-study-card': HomepageElementsCaseStudyCard;
       'homepage-elements.case-studies': HomepageElementsCaseStudies;
       'global-elements.transform-business': GlobalElementsTransformBusiness;
+      'global-elements.title': GlobalElementsTitle;
+      'global-elements.seo': GlobalElementsSeo;
+      'global-elements.meta-tag': GlobalElementsMetaTag;
+      'global-elements.meta-charset': GlobalElementsMetaCharset;
       'global-elements.footer': GlobalElementsFooter;
+      'global-elements.canonical-tag': GlobalElementsCanonicalTag;
       'global-elements.align': GlobalElementsAlign;
       'blogs-elements.leave-reply': BlogsElementsLeaveReply;
       'blogs-elements.latest-posts': BlogsElementsLatestPosts;

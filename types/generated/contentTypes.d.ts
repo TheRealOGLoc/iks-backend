@@ -1124,7 +1124,8 @@ export interface ApiHomeHome extends Schema.SingleType {
         'global-elements.footer',
         'global-elements.transform-business',
         'homepage-elements.clients',
-        'global-elements.align'
+        'global-elements.align',
+        'global-elements.seo'
       ]
     >;
     createdAt: Attribute.DateTime;

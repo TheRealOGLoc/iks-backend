@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_global_elements_meta_tags",
+  "info": {
+    "displayName": "metaTag",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "attribute": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "attributeName": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

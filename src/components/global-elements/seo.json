@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_global_elements_seos",
+  "info": {
+    "displayName": "SEO",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "metaTag": {
+      "type": "component",
+      "repeatable": true,
+      "component": "global-elements.meta-tag"
+    },
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "global-elements.title"
+    },
+    "chatset": {
+      "type": "component",
+      "repeatable": false,
+      "component": "global-elements.meta-charset"
+    },
+    "canonical": {
+      "type": "component",
+      "repeatable": true,
+      "component": "global-elements.canonical-tag"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_global_elements_meta_charsets",
+  "info": {
+    "displayName": "metaCharset"
+  },
+  "options": {},
+  "attributes": {
+    "attribute": {
+      "type": "string"
+    }
+  }
+}
