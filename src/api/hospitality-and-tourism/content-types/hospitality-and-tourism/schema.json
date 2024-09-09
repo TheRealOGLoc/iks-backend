@@ -19,7 +19,8 @@
         "industry-sector-elements.our-solution",
         "industry-sector-elements.hero-section",
         "global-elements.transform-business",
-        "global-elements.footer"
+        "global-elements.footer",
+        "global-elements.seo"
       ]
     }
   }

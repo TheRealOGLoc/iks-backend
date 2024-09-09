@@ -19,7 +19,8 @@
         "about-us-elements.affiliation",
         "about-us-elements.showcase",
         "global-elements.transform-business",
-        "global-elements.footer"
+        "global-elements.footer",
+        "global-elements.seo"
       ]
     }
   }

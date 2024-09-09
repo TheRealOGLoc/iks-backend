@@ -806,7 +806,8 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
         'about-us-elements.affiliation',
         'about-us-elements.showcase',
         'global-elements.transform-business',
-        'global-elements.footer'
+        'global-elements.footer',
+        'global-elements.seo'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -844,7 +845,8 @@ export interface ApiAllBlogAllBlog extends Schema.SingleType {
         'all-blogs-elements.hero',
         'all-blogs-elements.show-all-blogs',
         'global-elements.footer',
-        'global-elements.transform-business'
+        'global-elements.transform-business',
+        'global-elements.seo'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -882,7 +884,8 @@ export interface ApiAllCaseStudyAllCaseStudy extends Schema.SingleType {
         'all-case-studies-elements.hero',
         'all-case-studies-elements.show-all-case-studies',
         'global-elements.transform-business',
-        'global-elements.footer'
+        'global-elements.footer',
+        'global-elements.seo'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -922,7 +925,8 @@ export interface ApiBeautyAndAestheticBeautyAndAesthetic
         'industry-sector-elements.our-solution',
         'industry-sector-elements.pain-point',
         'global-elements.footer',
-        'global-elements.transform-business'
+        'global-elements.transform-business',
+        'global-elements.seo'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -1040,7 +1044,8 @@ export interface ApiCustomSoftwareSolutionCustomSoftwareSolution
         'service-sector-elements.our-approach',
         'service-sector-elements.hero',
         'global-elements.footer',
-        'global-elements.transform-business'
+        'global-elements.transform-business',
+        'global-elements.seo'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -1080,7 +1085,8 @@ export interface ApiHealthAndCommunityServiceHealthAndCommunityService
         'industry-sector-elements.our-solution',
         'industry-sector-elements.hero-section',
         'global-elements.footer',
-        'global-elements.transform-business'
+        'global-elements.transform-business',
+        'global-elements.seo'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -1157,7 +1163,8 @@ export interface ApiHospitalityAndTourismHospitalityAndTourism
         'industry-sector-elements.our-solution',
         'industry-sector-elements.hero-section',
         'global-elements.transform-business',
-        'global-elements.footer'
+        'global-elements.footer',
+        'global-elements.seo'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -1184,6 +1191,7 @@ export interface ApiIndustryIndustry extends Schema.SingleType {
     singularName: 'industry';
     pluralName: 'industries';
     displayName: 'Industry';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1195,7 +1203,8 @@ export interface ApiIndustryIndustry extends Schema.SingleType {
         'industries-elements.industries',
         'industries-elements.our-approach',
         'global-elements.transform-business',
-        'global-elements.footer'
+        'global-elements.footer',
+        'global-elements.seo'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -1236,7 +1245,8 @@ export interface ApiManagementConsultingManagementConsulting
         'service-sector-elements.our-approach',
         'service-sector-elements.hero',
         'global-elements.footer',
-        'global-elements.transform-business'
+        'global-elements.transform-business',
+        'global-elements.seo'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -1263,6 +1273,7 @@ export interface ApiOurTeamOurTeam extends Schema.SingleType {
     singularName: 'our-team';
     pluralName: 'our-teams';
     displayName: 'Our Team';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1273,7 +1284,8 @@ export interface ApiOurTeamOurTeam extends Schema.SingleType {
         'team-elements.hero',
         'team-elements.members',
         'global-elements.footer',
-        'global-elements.transform-business'
+        'global-elements.transform-business',
+        'global-elements.seo'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -1315,7 +1327,8 @@ export interface ApiPoliciesAndProcedurePoliciesAndProcedure
         'service-sector-elements.hero',
         'global-elements.footer',
         'global-elements.transform-business',
-        'service-sector-elements.our-process'
+        'service-sector-elements.our-process',
+        'global-elements.seo'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -1354,7 +1367,8 @@ export interface ApiRetailRetail extends Schema.SingleType {
         'industry-sector-elements.our-solution',
         'industry-sector-elements.hero-section',
         'global-elements.footer',
-        'global-elements.transform-business'
+        'global-elements.transform-business',
+        'global-elements.seo'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -1381,6 +1395,7 @@ export interface ApiServiceService extends Schema.SingleType {
     singularName: 'service';
     pluralName: 'services';
     displayName: 'Service';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1394,7 +1409,8 @@ export interface ApiServiceService extends Schema.SingleType {
         'services-elements.service-category',
         'services-elements.hero',
         'global-elements.transform-business',
-        'global-elements.footer'
+        'global-elements.footer',
+        'global-elements.seo'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -1433,7 +1449,8 @@ export interface ApiTechnologyTechnology extends Schema.SingleType {
         'industry-sector-elements.our-solution',
         'industry-sector-elements.hero-section',
         'global-elements.footer',
-        'global-elements.transform-business'
+        'global-elements.transform-business',
+        'global-elements.seo'
       ]
     >;
     createdAt: Attribute.DateTime;

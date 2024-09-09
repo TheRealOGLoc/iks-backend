@@ -18,7 +18,8 @@
         "all-blogs-elements.hero",
         "all-blogs-elements.show-all-blogs",
         "global-elements.footer",
-        "global-elements.transform-business"
+        "global-elements.transform-business",
+        "global-elements.seo"
       ]
     }
   }

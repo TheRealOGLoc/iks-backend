@@ -18,7 +18,8 @@
         "all-case-studies-elements.hero",
         "all-case-studies-elements.show-all-case-studies",
         "global-elements.transform-business",
-        "global-elements.footer"
+        "global-elements.footer",
+        "global-elements.seo"
       ]
     }
   }

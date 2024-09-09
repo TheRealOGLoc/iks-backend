@@ -4,7 +4,8 @@
   "info": {
     "singularName": "our-team",
     "pluralName": "our-teams",
-    "displayName": "Our Team"
+    "displayName": "Our Team",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,7 +18,8 @@
         "team-elements.hero",
         "team-elements.members",
         "global-elements.footer",
-        "global-elements.transform-business"
+        "global-elements.transform-business",
+        "global-elements.seo"
       ]
     }
   }

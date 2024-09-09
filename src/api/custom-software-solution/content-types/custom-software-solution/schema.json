@@ -21,7 +21,8 @@
         "service-sector-elements.our-approach",
         "service-sector-elements.hero",
         "global-elements.footer",
-        "global-elements.transform-business"
+        "global-elements.transform-business",
+        "global-elements.seo"
       ]
     }
   }

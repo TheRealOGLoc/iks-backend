@@ -4,7 +4,8 @@
   "info": {
     "singularName": "industry",
     "pluralName": "industries",
-    "displayName": "Industry"
+    "displayName": "Industry",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,7 +19,8 @@
         "industries-elements.industries",
         "industries-elements.our-approach",
         "global-elements.transform-business",
-        "global-elements.footer"
+        "global-elements.footer",
+        "global-elements.seo"
       ]
     }
   }
