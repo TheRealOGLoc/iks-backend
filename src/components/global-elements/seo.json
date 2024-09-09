@@ -12,21 +12,18 @@
       "component": "global-elements.meta-tag"
     },
     "title": {
-      "type": "component",
-      "repeatable": false,
-      "component": "global-elements.title",
-      "required": true
-    },
-    "chartset": {
-      "type": "component",
-      "repeatable": false,
-      "component": "global-elements.meta-charset",
+      "type": "string",
       "required": true
     },
     "canonical": {
+      "type": "string",
+      "required": false
+    },
+    "openGraph": {
+      "displayName": "OpenGraph",
       "type": "component",
-      "repeatable": true,
-      "component": "global-elements.canonical-tag"
+      "repeatable": false,
+      "component": "global-elements.open-graph"
     }
   }
 }

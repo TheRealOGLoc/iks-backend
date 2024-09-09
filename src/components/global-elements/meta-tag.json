@@ -13,10 +13,6 @@
     "content": {
       "type": "text",
       "required": true
-    },
-    "attributeName": {
-      "type": "string",
-      "required": true
     }
   }
 }

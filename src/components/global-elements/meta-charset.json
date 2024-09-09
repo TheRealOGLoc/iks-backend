@@ -1,12 +1,15 @@
 {
   "collectionName": "components_global_elements_meta_charsets",
   "info": {
-    "displayName": "metaCharset"
+    "displayName": "metaCharset",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "attribute": {
-      "type": "string"
+      "type": "string",
+      "default": "UTF-8",
+      "required": false
     }
   }
 }

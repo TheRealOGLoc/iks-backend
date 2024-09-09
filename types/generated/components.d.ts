@@ -606,10 +606,25 @@ export interface GlobalElementsSeo extends Schema.Component {
   };
   attributes: {
     metaTag: Attribute.Component<'global-elements.meta-tag', true>;
-    title: Attribute.Component<'global-elements.title'> & Attribute.Required;
-    chartset: Attribute.Component<'global-elements.meta-charset'> &
-      Attribute.Required;
-    canonical: Attribute.Component<'global-elements.canonical-tag', true>;
+    title: Attribute.String & Attribute.Required;
+    canonical: Attribute.String;
+    openGraph: Attribute.Component<'global-elements.open-graph'>;
+  };
+}
+
+export interface GlobalElementsOpenGraph extends Schema.Component {
+  collectionName: 'components_global_elements_open_graphs';
+  info: {
+    displayName: 'OpenGraph';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    type: Attribute.String & Attribute.Required;
+    url: Attribute.String & Attribute.Required;
+    siteName: Attribute.String & Attribute.Required;
+    images: Attribute.Media<'images', true>;
   };
 }
 
@@ -622,7 +637,6 @@ export interface GlobalElementsMetaTag extends Schema.Component {
   attributes: {
     attribute: Attribute.String & Attribute.Required;
     content: Attribute.Text & Attribute.Required;
-    attributeName: Attribute.String & Attribute.Required;
   };
 }
 
@@ -630,9 +644,10 @@ export interface GlobalElementsMetaCharset extends Schema.Component {
   collectionName: 'components_global_elements_meta_charsets';
   info: {
     displayName: 'metaCharset';
+    description: '';
   };
   attributes: {
-    attribute: Attribute.String;
+    attribute: Attribute.String & Attribute.DefaultTo<'UTF-8'>;
   };
 }
 
@@ -918,6 +933,7 @@ declare module '@strapi/types' {
       'global-elements.transform-business': GlobalElementsTransformBusiness;
       'global-elements.title': GlobalElementsTitle;
       'global-elements.seo': GlobalElementsSeo;
+      'global-elements.open-graph': GlobalElementsOpenGraph;
       'global-elements.meta-tag': GlobalElementsMetaTag;
       'global-elements.meta-charset': GlobalElementsMetaCharset;
       'global-elements.footer': GlobalElementsFooter;
