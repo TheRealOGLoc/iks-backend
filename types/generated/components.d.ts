@@ -483,6 +483,7 @@ export interface HomepageElementsServiceCard extends Schema.Component {
     description: Attribute.Text;
     buttonText: Attribute.String & Attribute.DefaultTo<'Explore More'>;
     mobileViewImage: Attribute.Media<'images'>;
+    buttonUrl: Attribute.String;
   };
 }
 
