@@ -18,9 +18,6 @@
     "buttonText": {
       "type": "string"
     },
-    "buttonUrl": {
-      "type": "string"
-    },
     "heroBackground": {
       "type": "media",
       "multiple": false,

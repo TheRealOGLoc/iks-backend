@@ -22,10 +22,6 @@
       "type": "string",
       "default": "Get in Touch"
     },
-    "buttonTextExplore": {
-      "type": "string",
-      "default": "Explore More"
-    },
     "image": {
       "type": "media",
       "multiple": false,
