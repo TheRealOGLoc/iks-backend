@@ -776,7 +776,8 @@ export interface BlogsElementsBanner extends Schema.Component {
     searchPlaceholder: Attribute.String & Attribute.DefaultTo<'Search'>;
     heroBackground: Attribute.Media<'images'>;
     mobileViewBackground: Attribute.Media<'images'>;
-    mobileViewDescription: Attribute.Text;
+    mobileViewDescription: Attribute.Text &
+      Attribute.DefaultTo<'Our take on everything that makes a business thrive or struggle.'>;
   };
 }
 

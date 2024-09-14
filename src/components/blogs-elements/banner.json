@@ -35,7 +35,8 @@
       ]
     },
     "mobileViewDescription": {
-      "type": "text"
+      "type": "text",
+      "default": "Our take on everything that makes a business thrive or struggle."
     }
   }
 }
