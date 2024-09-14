@@ -20,12 +20,12 @@
     "components": {
       "type": "dynamiczone",
       "components": [
-        "blogs-elements.banner",
         "blogs-elements.blog-content",
         "blogs-elements.latest-posts",
         "blogs-elements.leave-reply",
         "global-elements.transform-business",
-        "global-elements.footer"
+        "global-elements.footer",
+        "global-elements.seo"
       ]
     },
     "slug": {

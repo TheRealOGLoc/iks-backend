@@ -962,12 +962,12 @@ export interface ApiBlogBlog extends Schema.CollectionType {
     title: Attribute.String & Attribute.Required & Attribute.Unique;
     components: Attribute.DynamicZone<
       [
-        'blogs-elements.banner',
         'blogs-elements.blog-content',
         'blogs-elements.latest-posts',
         'blogs-elements.leave-reply',
         'global-elements.transform-business',
-        'global-elements.footer'
+        'global-elements.footer',
+        'global-elements.seo'
       ]
     >;
     slug: Attribute.String & Attribute.Required & Attribute.Unique;
@@ -1001,7 +1001,8 @@ export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
         'blogs-elements.latest-posts',
         'blogs-elements.leave-reply',
         'global-elements.footer',
-        'global-elements.transform-business'
+        'global-elements.transform-business',
+        'global-elements.seo'
       ]
     >;
     slug: Attribute.String & Attribute.Required & Attribute.Unique;

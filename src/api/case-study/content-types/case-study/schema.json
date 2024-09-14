@@ -24,7 +24,8 @@
         "blogs-elements.latest-posts",
         "blogs-elements.leave-reply",
         "global-elements.footer",
-        "global-elements.transform-business"
+        "global-elements.transform-business",
+        "global-elements.seo"
       ]
     },
     "slug": {
