@@ -14,10 +14,6 @@
       "type": "string",
       "default": "Our take on everything that makes a business thrive or struggle."
     },
-    "searchPlaceholder": {
-      "type": "string",
-      "default": "Search"
-    },
     "heroBackground": {
       "type": "media",
       "multiple": false,
