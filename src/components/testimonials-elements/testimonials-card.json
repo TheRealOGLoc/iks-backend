@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_testimonials_elements_testimonials_cards",
+  "info": {
+    "displayName": "TestimonialsCard"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "titleAndCompanyName": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "text"
+    }
+  }
+}

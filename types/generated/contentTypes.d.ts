@@ -1472,6 +1472,44 @@ export interface ApiTechnologyTechnology extends Schema.SingleType {
   };
 }
 
+export interface ApiTestimonialTestimonial extends Schema.SingleType {
+  collectionName: 'testimonials';
+  info: {
+    singularName: 'testimonial';
+    pluralName: 'testimonials';
+    displayName: 'Testimonial';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    components: Attribute.DynamicZone<
+      [
+        'testimonials-elements.hero',
+        'testimonials-elements.testimonials',
+        'global-elements.seo',
+        'global-elements.transform-business',
+        'global-elements.footer'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::testimonial.testimonial',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::testimonial.testimonial',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1507,6 +1545,7 @@ declare module '@strapi/types' {
       'api::retail.retail': ApiRetailRetail;
       'api::service.service': ApiServiceService;
       'api::technology.technology': ApiTechnologyTechnology;
+      'api::testimonial.testimonial': ApiTestimonialTestimonial;
     }
   }
 }

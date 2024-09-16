@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "testimonials",
+  "info": {
+    "singularName": "testimonial",
+    "pluralName": "testimonials",
+    "displayName": "Testimonial"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "components": {
+      "type": "dynamiczone",
+      "components": [
+        "testimonials-elements.hero",
+        "testimonials-elements.testimonials",
+        "global-elements.seo",
+        "global-elements.transform-business",
+        "global-elements.footer"
+      ]
+    }
+  }
+}

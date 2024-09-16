@@ -1,5 +1,43 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface TestimonialsElementsTestimonials extends Schema.Component {
+  collectionName: 'components_testimonials_elements_testimonials';
+  info: {
+    displayName: 'Testimonials';
+  };
+  attributes: {
+    card: Attribute.Component<'testimonials-elements.testimonials-card', true>;
+  };
+}
+
+export interface TestimonialsElementsTestimonialsCard extends Schema.Component {
+  collectionName: 'components_testimonials_elements_testimonials_cards';
+  info: {
+    displayName: 'TestimonialsCard';
+  };
+  attributes: {
+    name: Attribute.String;
+    titleAndCompanyName: Attribute.String;
+    comment: Attribute.Text;
+  };
+}
+
+export interface TestimonialsElementsHero extends Schema.Component {
+  collectionName: 'components_testimonials_elements_heroes';
+  info: {
+    displayName: 'Hero';
+    description: '';
+  };
+  attributes: {
+    heroBackground: Attribute.Media<'images'>;
+    description: Attribute.Text;
+    buttonText: Attribute.String;
+    title: Attribute.String;
+    mobileViewDescription: Attribute.Text;
+    mobileViewBackground: Attribute.Media<'images'>;
+  };
+}
+
 export interface TeamElementsMembers extends Schema.Component {
   collectionName: 'components_team_elements_members';
   info: {
@@ -809,6 +847,34 @@ export interface AllCaseStudiesElementsHero extends Schema.Component {
   };
 }
 
+export interface AllBlogsElementsShowAllBlogs extends Schema.Component {
+  collectionName: 'components_all_blogs_elements_show_all_blogs';
+  info: {
+    displayName: 'ShowAllBlogs';
+  };
+  attributes: {
+    showAllBlogs: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<true>;
+  };
+}
+
+export interface AllBlogsElementsHero extends Schema.Component {
+  collectionName: 'components_all_blogs_elements_heroes';
+  info: {
+    displayName: 'Hero';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    searchPlaceholder: Attribute.String;
+    heroBackground: Attribute.Media<'images'>;
+    mobileViewBackground: Attribute.Media<'images'>;
+    mobileViewDescription: Attribute.Text;
+  };
+}
+
 export interface AboutUsElementsShowcase extends Schema.Component {
   collectionName: 'components_about_us_elements_showcases';
   info: {
@@ -865,37 +931,12 @@ export interface AboutUsElementsAffiliation extends Schema.Component {
   };
 }
 
-export interface AllBlogsElementsShowAllBlogs extends Schema.Component {
-  collectionName: 'components_all_blogs_elements_show_all_blogs';
-  info: {
-    displayName: 'ShowAllBlogs';
-  };
-  attributes: {
-    showAllBlogs: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<true>;
-  };
-}
-
-export interface AllBlogsElementsHero extends Schema.Component {
-  collectionName: 'components_all_blogs_elements_heroes';
-  info: {
-    displayName: 'Hero';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    searchPlaceholder: Attribute.String;
-    heroBackground: Attribute.Media<'images'>;
-    mobileViewBackground: Attribute.Media<'images'>;
-    mobileViewDescription: Attribute.Text;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'testimonials-elements.testimonials': TestimonialsElementsTestimonials;
+      'testimonials-elements.testimonials-card': TestimonialsElementsTestimonialsCard;
+      'testimonials-elements.hero': TestimonialsElementsHero;
       'team-elements.members': TeamElementsMembers;
       'team-elements.member-card': TeamElementsMemberCard;
       'team-elements.hero': TeamElementsHero;
@@ -951,12 +992,12 @@ declare module '@strapi/types' {
       'blogs-elements.banner': BlogsElementsBanner;
       'all-case-studies-elements.show-all-case-studies': AllCaseStudiesElementsShowAllCaseStudies;
       'all-case-studies-elements.hero': AllCaseStudiesElementsHero;
+      'all-blogs-elements.show-all-blogs': AllBlogsElementsShowAllBlogs;
+      'all-blogs-elements.hero': AllBlogsElementsHero;
       'about-us-elements.showcase': AboutUsElementsShowcase;
       'about-us-elements.showcase-card': AboutUsElementsShowcaseCard;
       'about-us-elements.hero': AboutUsElementsHero;
       'about-us-elements.affiliation': AboutUsElementsAffiliation;
-      'all-blogs-elements.show-all-blogs': AllBlogsElementsShowAllBlogs;
-      'all-blogs-elements.hero': AllBlogsElementsHero;
     }
   }
 }
