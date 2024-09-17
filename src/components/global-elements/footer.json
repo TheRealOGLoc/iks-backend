@@ -96,7 +96,7 @@
     },
     "locationAddressLineTwo": {
       "type": "text",
-      "default": "Level 14, 32 Smith Road Paramatta NSW 2150"
+      "default": "Level 14, 32 Smith St, Paramatta NSW 2150"
     }
   }
 }

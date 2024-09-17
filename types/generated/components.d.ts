@@ -725,7 +725,7 @@ export interface GlobalElementsFooter extends Schema.Component {
     mailAddress: Attribute.String &
       Attribute.DefaultTo<'info@infinikeysolutions.com.au'>;
     locationAddressLineTwo: Attribute.Text &
-      Attribute.DefaultTo<'Level 14, 32 Smith Road\u2028Paramatta NSW 2150'>;
+      Attribute.DefaultTo<'Level 14, 32 Smith St,\u2028Paramatta NSW 2150'>;
   };
 }
 
