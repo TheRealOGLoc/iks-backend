@@ -179,6 +179,34 @@ export interface ServicesElementsHero extends Schema.Component {
   };
 }
 
+export interface PrivacyPolicyElementsPrivacyPolicyContent
+  extends Schema.Component {
+  collectionName: 'components_privacy_policy_elements_privacy_policy_contents';
+  info: {
+    displayName: 'PrivacyPolicyContent';
+    description: '';
+  };
+  attributes: {
+    content: Attribute.Blocks;
+    title: Attribute.String;
+  };
+}
+
+export interface PrivacyPolicyElementsHero extends Schema.Component {
+  collectionName: 'components_privacy_policy_elements_heroes';
+  info: {
+    displayName: 'Hero';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    mobileViewDescription: Attribute.Text;
+    heroBackground: Attribute.Media<'images'>;
+    mobileViewBackground: Attribute.Media<'images'>;
+  };
+}
+
 export interface ServiceSectorElementsWhyChooseUs extends Schema.Component {
   collectionName: 'components_industry_sector_elements_why_chooseuses';
   info: {
@@ -317,34 +345,6 @@ export interface ServiceSectorElementsHero extends Schema.Component {
     heroBackground: Attribute.Media<'images'>;
     mobileViewBackground: Attribute.Media<'images'>;
     mobileViewDescription: Attribute.Text;
-  };
-}
-
-export interface PrivacyPolicyElementsPrivacyPolicyContent
-  extends Schema.Component {
-  collectionName: 'components_privacy_policy_elements_privacy_policy_contents';
-  info: {
-    displayName: 'PrivacyPolicyContent';
-    description: '';
-  };
-  attributes: {
-    content: Attribute.Blocks;
-    title: Attribute.String;
-  };
-}
-
-export interface PrivacyPolicyElementsHero extends Schema.Component {
-  collectionName: 'components_privacy_policy_elements_heroes';
-  info: {
-    displayName: 'Hero';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    mobileViewDescription: Attribute.Text;
-    heroBackground: Attribute.Media<'images'>;
-    mobileViewBackground: Attribute.Media<'images'>;
   };
 }
 
@@ -652,7 +652,7 @@ export interface GlobalElementsTransformBusiness extends Schema.Component {
     description: Attribute.Text &
       Attribute.DefaultTo<"Ready to Transform Your Business? Don't wait; take the first step towards achieving your business goals. Contact us today to discuss how we can help you achieve lasting success.">;
     buttonTextTouch: Attribute.String & Attribute.DefaultTo<'Get in Touch'>;
-    image: Attribute.Media<'images'>;
+    image: Attribute.Media<'images'> & Attribute.Required;
   };
 }
 
@@ -975,6 +975,8 @@ declare module '@strapi/types' {
       'services-elements.service-category': ServicesElementsServiceCategory;
       'services-elements.industry-card': ServicesElementsIndustryCard;
       'services-elements.hero': ServicesElementsHero;
+      'privacy-policy-elements.privacy-policy-content': PrivacyPolicyElementsPrivacyPolicyContent;
+      'privacy-policy-elements.hero': PrivacyPolicyElementsHero;
       'service-sector-elements.why-choose-us': ServiceSectorElementsWhyChooseUs;
       'service-sector-elements.why-choose-us-card': ServiceSectorElementsWhyChooseUsCard;
       'service-sector-elements.services': ServiceSectorElementsServices;
@@ -984,8 +986,6 @@ declare module '@strapi/types' {
       'service-sector-elements.our-approach': ServiceSectorElementsOurApproach;
       'service-sector-elements.our-approach-card': ServiceSectorElementsOurApproachCard;
       'service-sector-elements.hero': ServiceSectorElementsHero;
-      'privacy-policy-elements.privacy-policy-content': PrivacyPolicyElementsPrivacyPolicyContent;
-      'privacy-policy-elements.hero': PrivacyPolicyElementsHero;
       'industry-sector-elements.pain-point': IndustrySectorElementsPainPoint;
       'industry-sector-elements.pain-point-card': IndustrySectorElementsPainPointCard;
       'industry-sector-elements.our-solution': IndustrySectorElementsOurSolution;
