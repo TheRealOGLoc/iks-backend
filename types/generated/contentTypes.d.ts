@@ -833,7 +833,7 @@ export interface ApiAllBlogAllBlog extends Schema.SingleType {
   info: {
     singularName: 'all-blog';
     pluralName: 'all-blogs';
-    displayName: 'Blogs';
+    displayName: 'Blogs Page';
     description: '';
   };
   options: {
@@ -872,7 +872,7 @@ export interface ApiAllCaseStudyAllCaseStudy extends Schema.SingleType {
   info: {
     singularName: 'all-case-study';
     pluralName: 'all-case-studies';
-    displayName: 'Case Studies';
+    displayName: 'Case Studies Page';
     description: '';
   };
   options: {
@@ -967,7 +967,8 @@ export interface ApiBlogBlog extends Schema.CollectionType {
         'blogs-elements.leave-reply',
         'global-elements.transform-business',
         'global-elements.footer',
-        'global-elements.seo'
+        'global-elements.seo',
+        'blogs-elements.banner'
       ]
     >;
     slug: Attribute.String & Attribute.Required & Attribute.Unique;
@@ -1350,6 +1351,45 @@ export interface ApiPoliciesAndProcedurePoliciesAndProcedure
   };
 }
 
+export interface ApiPrivacyAndPolicyPrivacyAndPolicy extends Schema.SingleType {
+  collectionName: 'privacy_and_policies';
+  info: {
+    singularName: 'privacy-and-policy';
+    pluralName: 'privacy-and-policies';
+    displayName: 'Privacy Policy';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    components: Attribute.DynamicZone<
+      [
+        'privacy-policy-elements.hero',
+        'privacy-policy-elements.privacy-policy-content',
+        'global-elements.seo',
+        'global-elements.transform-business',
+        'global-elements.footer'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::privacy-and-policy.privacy-and-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::privacy-and-policy.privacy-and-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiRetailRetail extends Schema.SingleType {
   collectionName: 'retails';
   info: {
@@ -1542,6 +1582,7 @@ declare module '@strapi/types' {
       'api::management-consulting.management-consulting': ApiManagementConsultingManagementConsulting;
       'api::our-team.our-team': ApiOurTeamOurTeam;
       'api::policies-and-procedure.policies-and-procedure': ApiPoliciesAndProcedurePoliciesAndProcedure;
+      'api::privacy-and-policy.privacy-and-policy': ApiPrivacyAndPolicyPrivacyAndPolicy;
       'api::retail.retail': ApiRetailRetail;
       'api::service.service': ApiServiceService;
       'api::technology.technology': ApiTechnologyTechnology;

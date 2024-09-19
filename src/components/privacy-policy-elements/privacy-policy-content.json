@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_privacy_policy_elements_privacy_policy_contents",
+  "info": {
+    "displayName": "PrivacyPolicyContent",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "blocks"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

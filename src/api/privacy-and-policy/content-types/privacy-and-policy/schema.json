@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "privacy_and_policies",
+  "info": {
+    "singularName": "privacy-and-policy",
+    "pluralName": "privacy-and-policies",
+    "displayName": "Privacy Policy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "components": {
+      "type": "dynamiczone",
+      "components": [
+        "privacy-policy-elements.hero",
+        "privacy-policy-elements.privacy-policy-content",
+        "global-elements.seo",
+        "global-elements.transform-business",
+        "global-elements.footer"
+      ]
+    }
+  }
+}

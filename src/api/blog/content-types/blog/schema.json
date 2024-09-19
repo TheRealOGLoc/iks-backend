@@ -25,7 +25,8 @@
         "blogs-elements.leave-reply",
         "global-elements.transform-business",
         "global-elements.footer",
-        "global-elements.seo"
+        "global-elements.seo",
+        "blogs-elements.banner"
       ]
     },
     "slug": {
