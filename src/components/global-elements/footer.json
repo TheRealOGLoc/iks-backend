@@ -30,45 +30,9 @@
       "type": "string",
       "default": "Home"
     },
-    "menuCaseStudies": {
-      "type": "string",
-      "default": "Case studies"
-    },
-    "menuFeatures": {
-      "type": "string",
-      "default": "Features"
-    },
-    "menuDownloads": {
-      "type": "string",
-      "default": "Downloads"
-    },
-    "menuBlogs": {
-      "type": "string",
-      "default": "Blogs"
-    },
     "companyLabel": {
       "type": "string",
       "default": "Company"
-    },
-    "companyAbout": {
-      "type": "string",
-      "default": "About"
-    },
-    "companyContactUs": {
-      "type": "string",
-      "default": "Contact us"
-    },
-    "companyCareers": {
-      "type": "string",
-      "default": "Careers"
-    },
-    "companyHelpCenter": {
-      "type": "string",
-      "default": "Help Center"
-    },
-    "companySupport": {
-      "type": "string",
-      "default": "Support"
     },
     "locationLabel": {
       "type": "string",
@@ -97,6 +61,38 @@
     "locationAddressLineTwo": {
       "type": "text",
       "default": "Level 14, 32 Smith St, Paramatta NSW 2150"
+    },
+    "menuServices": {
+      "type": "string",
+      "default": "Services"
+    },
+    "menuIndustries": {
+      "type": "string",
+      "default": "Industries"
+    },
+    "menuBlogs": {
+      "type": "string",
+      "default": "Blogs"
+    },
+    "menuCaseStudies": {
+      "type": "string",
+      "default": "Case Studies"
+    },
+    "companyAboutUs": {
+      "type": "string",
+      "default": "About Us"
+    },
+    "companyOurTeam": {
+      "type": "string",
+      "default": "Our Team"
+    },
+    "companyTestimonials": {
+      "type": "string",
+      "default": "Testimonials"
+    },
+    "companyPrivacyPolicy": {
+      "type": "string",
+      "default": "Privacy Policy"
     }
   }
 }
