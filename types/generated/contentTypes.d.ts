@@ -1025,6 +1025,40 @@ export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
   };
 }
 
+export interface ApiCommentComment extends Schema.CollectionType {
+  collectionName: 'comments';
+  info: {
+    singularName: 'comment';
+    pluralName: 'comments';
+    displayName: 'Comment';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    postSlug: Attribute.String & Attribute.Required;
+    name: Attribute.String;
+    email: Attribute.String;
+    website: Attribute.String;
+    comment: Attribute.Text & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::comment.comment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::comment.comment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCustomSoftwareSolutionCustomSoftwareSolution
   extends Schema.SingleType {
   collectionName: 'custom_software_solutions';
@@ -1574,6 +1608,7 @@ declare module '@strapi/types' {
       'api::beauty-and-aesthetic.beauty-and-aesthetic': ApiBeautyAndAestheticBeautyAndAesthetic;
       'api::blog.blog': ApiBlogBlog;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
+      'api::comment.comment': ApiCommentComment;
       'api::custom-software-solution.custom-software-solution': ApiCustomSoftwareSolutionCustomSoftwareSolution;
       'api::health-and-community-service.health-and-community-service': ApiHealthAndCommunityServiceHealthAndCommunityService;
       'api::home.home': ApiHomeHome;
