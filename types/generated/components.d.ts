@@ -1,43 +1,5 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
-export interface TestimonialsElementsTestimonials extends Schema.Component {
-  collectionName: 'components_testimonials_elements_testimonials';
-  info: {
-    displayName: 'Testimonials';
-  };
-  attributes: {
-    card: Attribute.Component<'testimonials-elements.testimonials-card', true>;
-  };
-}
-
-export interface TestimonialsElementsTestimonialsCard extends Schema.Component {
-  collectionName: 'components_testimonials_elements_testimonials_cards';
-  info: {
-    displayName: 'TestimonialsCard';
-  };
-  attributes: {
-    name: Attribute.String;
-    titleAndCompanyName: Attribute.String;
-    comment: Attribute.Text;
-  };
-}
-
-export interface TestimonialsElementsHero extends Schema.Component {
-  collectionName: 'components_testimonials_elements_heroes';
-  info: {
-    displayName: 'Hero';
-    description: '';
-  };
-  attributes: {
-    heroBackground: Attribute.Media<'images'> & Attribute.Required;
-    description: Attribute.Text;
-    buttonText: Attribute.String;
-    title: Attribute.String;
-    mobileViewDescription: Attribute.Text;
-    mobileViewBackground: Attribute.Media<'images'> & Attribute.Required;
-  };
-}
-
 export interface TeamElementsMembers extends Schema.Component {
   collectionName: 'components_team_elements_members';
   info: {
@@ -80,6 +42,44 @@ export interface TeamElementsHero extends Schema.Component {
     heroBackground: Attribute.Media<'images'> & Attribute.Required;
     mobileViewBackground: Attribute.Media<'images'> & Attribute.Required;
     mobileViewDescription: Attribute.Text;
+  };
+}
+
+export interface TestimonialsElementsTestimonials extends Schema.Component {
+  collectionName: 'components_testimonials_elements_testimonials';
+  info: {
+    displayName: 'Testimonials';
+  };
+  attributes: {
+    card: Attribute.Component<'testimonials-elements.testimonials-card', true>;
+  };
+}
+
+export interface TestimonialsElementsTestimonialsCard extends Schema.Component {
+  collectionName: 'components_testimonials_elements_testimonials_cards';
+  info: {
+    displayName: 'TestimonialsCard';
+  };
+  attributes: {
+    name: Attribute.String;
+    titleAndCompanyName: Attribute.String;
+    comment: Attribute.Text;
+  };
+}
+
+export interface TestimonialsElementsHero extends Schema.Component {
+  collectionName: 'components_testimonials_elements_heroes';
+  info: {
+    displayName: 'Hero';
+    description: '';
+  };
+  attributes: {
+    heroBackground: Attribute.Media<'images'> & Attribute.Required;
+    description: Attribute.Text;
+    buttonText: Attribute.String;
+    title: Attribute.String;
+    mobileViewDescription: Attribute.Text;
+    mobileViewBackground: Attribute.Media<'images'> & Attribute.Required;
   };
 }
 
@@ -784,6 +784,35 @@ export interface GlobalElementsAlign extends Schema.Component {
   };
 }
 
+export interface AllCaseStudiesElementsShowAllCaseStudies
+  extends Schema.Component {
+  collectionName: 'components_all_case_studies_elements_show_all_case_studies';
+  info: {
+    displayName: 'ShowAllCaseStudies';
+  };
+  attributes: {
+    showAllCaseStudies: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<true>;
+  };
+}
+
+export interface AllCaseStudiesElementsHero extends Schema.Component {
+  collectionName: 'components_all_case_studies_elements_heroes';
+  info: {
+    displayName: 'Hero';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    searchPlaceholder: Attribute.String;
+    heroBackground: Attribute.Media<'images'> & Attribute.Required;
+    mobileViewBackground: Attribute.Media<'images'> & Attribute.Required;
+    mobileViewDescription: Attribute.Text;
+  };
+}
+
 export interface BlogsElementsLeaveReply extends Schema.Component {
   collectionName: 'components_blogs_elements_leave_replies';
   info: {
@@ -846,35 +875,6 @@ export interface BlogsElementsBanner extends Schema.Component {
     mobileViewBackground: Attribute.Media<'images'> & Attribute.Required;
     mobileViewDescription: Attribute.Text &
       Attribute.DefaultTo<'Our take on everything that makes a business thrive or struggle.'>;
-  };
-}
-
-export interface AllCaseStudiesElementsShowAllCaseStudies
-  extends Schema.Component {
-  collectionName: 'components_all_case_studies_elements_show_all_case_studies';
-  info: {
-    displayName: 'ShowAllCaseStudies';
-  };
-  attributes: {
-    showAllCaseStudies: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<true>;
-  };
-}
-
-export interface AllCaseStudiesElementsHero extends Schema.Component {
-  collectionName: 'components_all_case_studies_elements_heroes';
-  info: {
-    displayName: 'Hero';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    searchPlaceholder: Attribute.String;
-    heroBackground: Attribute.Media<'images'> & Attribute.Required;
-    mobileViewBackground: Attribute.Media<'images'> & Attribute.Required;
-    mobileViewDescription: Attribute.Text;
   };
 }
 
@@ -967,12 +967,12 @@ export interface AboutUsElementsAffiliation extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'testimonials-elements.testimonials': TestimonialsElementsTestimonials;
-      'testimonials-elements.testimonials-card': TestimonialsElementsTestimonialsCard;
-      'testimonials-elements.hero': TestimonialsElementsHero;
       'team-elements.members': TeamElementsMembers;
       'team-elements.member-card': TeamElementsMemberCard;
       'team-elements.hero': TeamElementsHero;
+      'testimonials-elements.testimonials': TestimonialsElementsTestimonials;
+      'testimonials-elements.testimonials-card': TestimonialsElementsTestimonialsCard;
+      'testimonials-elements.hero': TestimonialsElementsHero;
       'services-elements.whys-choose-us-card': ServicesElementsWhysChooseUsCard;
       'services-elements.why-choose-us': ServicesElementsWhyChooseUs;
       'services-elements.service-modules': ServicesElementsServiceModules;
@@ -1021,12 +1021,12 @@ declare module '@strapi/types' {
       'global-elements.footer': GlobalElementsFooter;
       'global-elements.canonical-tag': GlobalElementsCanonicalTag;
       'global-elements.align': GlobalElementsAlign;
+      'all-case-studies-elements.show-all-case-studies': AllCaseStudiesElementsShowAllCaseStudies;
+      'all-case-studies-elements.hero': AllCaseStudiesElementsHero;
       'blogs-elements.leave-reply': BlogsElementsLeaveReply;
       'blogs-elements.latest-posts': BlogsElementsLatestPosts;
       'blogs-elements.blog-content': BlogsElementsBlogContent;
       'blogs-elements.banner': BlogsElementsBanner;
-      'all-case-studies-elements.show-all-case-studies': AllCaseStudiesElementsShowAllCaseStudies;
-      'all-case-studies-elements.hero': AllCaseStudiesElementsHero;
       'all-blogs-elements.show-all-blogs': AllBlogsElementsShowAllBlogs;
       'all-blogs-elements.hero': AllBlogsElementsHero;
       'about-us-elements.showcase': AboutUsElementsShowcase;
