@@ -1,16 +1,18 @@
 {
   "collectionName": "components_homepage_elements_why_us_cards",
   "info": {
-    "displayName": "WhyUsCard"
+    "displayName": "WhyUsCard",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "description": {
       "type": "text"

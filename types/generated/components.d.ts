@@ -29,12 +29,12 @@ export interface TestimonialsElementsHero extends Schema.Component {
     description: '';
   };
   attributes: {
-    heroBackground: Attribute.Media<'images'>;
+    heroBackground: Attribute.Media<'images'> & Attribute.Required;
     description: Attribute.Text;
     buttonText: Attribute.String;
     title: Attribute.String;
     mobileViewDescription: Attribute.Text;
-    mobileViewBackground: Attribute.Media<'images'>;
+    mobileViewBackground: Attribute.Media<'images'> & Attribute.Required;
   };
 }
 
@@ -77,8 +77,8 @@ export interface TeamElementsHero extends Schema.Component {
     title: Attribute.String;
     description: Attribute.Text;
     buttonText: Attribute.String;
-    heroBackground: Attribute.Media<'images'>;
-    mobileViewBackground: Attribute.Media<'images'>;
+    heroBackground: Attribute.Media<'images'> & Attribute.Required;
+    mobileViewBackground: Attribute.Media<'images'> & Attribute.Required;
     mobileViewDescription: Attribute.Text;
   };
 }
@@ -171,39 +171,11 @@ export interface ServicesElementsHero extends Schema.Component {
   };
   attributes: {
     title: Attribute.String;
-    heroBackground: Attribute.Media<'images'>;
+    heroBackground: Attribute.Media<'images'> & Attribute.Required;
     description: Attribute.Text;
     buttonText: Attribute.String;
-    mobileViewBackground: Attribute.Media<'images'>;
+    mobileViewBackground: Attribute.Media<'images'> & Attribute.Required;
     mobileViewDescription: Attribute.Text;
-  };
-}
-
-export interface PrivacyPolicyElementsPrivacyPolicyContent
-  extends Schema.Component {
-  collectionName: 'components_privacy_policy_elements_privacy_policy_contents';
-  info: {
-    displayName: 'PrivacyPolicyContent';
-    description: '';
-  };
-  attributes: {
-    content: Attribute.Blocks;
-    title: Attribute.String;
-  };
-}
-
-export interface PrivacyPolicyElementsHero extends Schema.Component {
-  collectionName: 'components_privacy_policy_elements_heroes';
-  info: {
-    displayName: 'Hero';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    mobileViewDescription: Attribute.Text;
-    heroBackground: Attribute.Media<'images'>;
-    mobileViewBackground: Attribute.Media<'images'>;
   };
 }
 
@@ -326,7 +298,7 @@ export interface ServiceSectorElementsOurApproachCard extends Schema.Component {
     description: '';
   };
   attributes: {
-    icon: Attribute.Media<'images'>;
+    icon: Attribute.Media<'images'> & Attribute.Required;
     title: Attribute.String;
     description: Attribute.Text;
   };
@@ -342,9 +314,37 @@ export interface ServiceSectorElementsHero extends Schema.Component {
     title: Attribute.String;
     description: Attribute.Text;
     buttonText: Attribute.String;
-    heroBackground: Attribute.Media<'images'>;
-    mobileViewBackground: Attribute.Media<'images'>;
+    heroBackground: Attribute.Media<'images'> & Attribute.Required;
+    mobileViewBackground: Attribute.Media<'images'> & Attribute.Required;
     mobileViewDescription: Attribute.Text;
+  };
+}
+
+export interface PrivacyPolicyElementsPrivacyPolicyContent
+  extends Schema.Component {
+  collectionName: 'components_privacy_policy_elements_privacy_policy_contents';
+  info: {
+    displayName: 'PrivacyPolicyContent';
+    description: '';
+  };
+  attributes: {
+    content: Attribute.Blocks;
+    title: Attribute.String;
+  };
+}
+
+export interface PrivacyPolicyElementsHero extends Schema.Component {
+  collectionName: 'components_privacy_policy_elements_heroes';
+  info: {
+    displayName: 'Hero';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    mobileViewDescription: Attribute.Text;
+    heroBackground: Attribute.Media<'images'> & Attribute.Required;
+    mobileViewBackground: Attribute.Media<'images'> & Attribute.Required;
   };
 }
 
@@ -368,7 +368,7 @@ export interface IndustrySectorElementsPainPointCard extends Schema.Component {
     description: '';
   };
   attributes: {
-    icon: Attribute.Media<'images'>;
+    icon: Attribute.Media<'images'> & Attribute.Required;
     title: Attribute.String;
     description: Attribute.Text;
   };
@@ -393,9 +393,10 @@ export interface IndustrySectorElementsOurSolutionCard
   collectionName: 'components_industry_sector_elements_our_solution_cards';
   info: {
     displayName: 'OurSolutionCard';
+    description: '';
   };
   attributes: {
-    icon: Attribute.Media<'images'>;
+    icon: Attribute.Media<'images'> & Attribute.Required;
     title: Attribute.String;
     description: Attribute.Text;
   };
@@ -411,8 +412,8 @@ export interface IndustrySectorElementsHeroSection extends Schema.Component {
     title: Attribute.String;
     description: Attribute.Text;
     buttonText: Attribute.String;
-    heroBackground: Attribute.Media<'images'>;
-    mobileViewBackground: Attribute.Media<'images'>;
+    heroBackground: Attribute.Media<'images'> & Attribute.Required;
+    mobileViewBackground: Attribute.Media<'images'> & Attribute.Required;
     mobileViewDescription: Attribute.Text;
   };
 }
@@ -435,7 +436,7 @@ export interface IndustriesElementsIndustryCard extends Schema.Component {
     description: '';
   };
   attributes: {
-    image: Attribute.Media<'images'>;
+    image: Attribute.Media<'images'> & Attribute.Required;
     title: Attribute.String;
     description: Attribute.Text;
     buttonText: Attribute.String;
@@ -470,8 +471,8 @@ export interface IndustriesElementsHero extends Schema.Component {
     title: Attribute.String;
     description: Attribute.Text;
     buttonText: Attribute.String;
-    heroBackground: Attribute.Media<'images'>;
-    mobileViewBackground: Attribute.Media<'images'>;
+    heroBackground: Attribute.Media<'images'> & Attribute.Required;
+    mobileViewBackground: Attribute.Media<'images'> & Attribute.Required;
     mobileViewDescription: Attribute.Text;
   };
 }
@@ -493,9 +494,10 @@ export interface HomepageElementsWhyUsCard extends Schema.Component {
   collectionName: 'components_homepage_elements_why_us_cards';
   info: {
     displayName: 'WhyUsCard';
+    description: '';
   };
   attributes: {
-    icon: Attribute.Media<'images'>;
+    icon: Attribute.Media<'images'> & Attribute.Required;
     description: Attribute.Text;
     title: Attribute.String;
   };
@@ -519,9 +521,10 @@ export interface HomepageElementsSolutionCard extends Schema.Component {
   collectionName: 'components_homepage_elements_solution_cards';
   info: {
     displayName: 'SolutionCard';
+    description: '';
   };
   attributes: {
-    icon: Attribute.Media<'images'>;
+    icon: Attribute.Media<'images'> & Attribute.Required;
     description: Attribute.Text;
   };
 }
@@ -547,11 +550,11 @@ export interface HomepageElementsServiceCard extends Schema.Component {
     description: '';
   };
   attributes: {
-    icon: Attribute.Media<'images'>;
+    icon: Attribute.Media<'images'> & Attribute.Required;
     title: Attribute.String;
     description: Attribute.Text;
     buttonText: Attribute.String & Attribute.DefaultTo<'Explore More'>;
-    mobileViewImage: Attribute.Media<'images'>;
+    mobileViewImage: Attribute.Media<'images'> & Attribute.Required;
     buttonUrl: Attribute.String;
   };
 }
@@ -594,7 +597,7 @@ export interface HomepageElementsHero extends Schema.Component {
     subtitle: Attribute.String;
     description: Attribute.Text;
     buttonText: Attribute.String;
-    heroBackground: Attribute.Media<'images'>;
+    heroBackground: Attribute.Media<'images'> & Attribute.Required;
     mobileViewDescription: Attribute.Text;
   };
 }
@@ -609,8 +612,8 @@ export interface HomepageElementsClients extends Schema.Component {
     titleLeftPart: Attribute.String;
     titleRightPart: Attribute.String;
     description: Attribute.Text;
-    firstRow: Attribute.Media<'images', true>;
-    secondRow: Attribute.Media<'images', true>;
+    firstRow: Attribute.Media<'images', true> & Attribute.Required;
+    secondRow: Attribute.Media<'images', true> & Attribute.Required;
   };
 }
 
@@ -820,7 +823,7 @@ export interface BlogsElementsBlogContent extends Schema.Component {
   attributes: {
     postTime: Attribute.Date & Attribute.Required;
     title: Attribute.String & Attribute.Required;
-    blogImage: Attribute.Media<'images'>;
+    blogImage: Attribute.Media<'images'> & Attribute.Required;
     readTime: Attribute.Integer & Attribute.DefaultTo<5>;
     content: Attribute.Blocks;
     showSubscribeCard: Attribute.Boolean &
@@ -839,38 +842,10 @@ export interface BlogsElementsBanner extends Schema.Component {
     title: Attribute.String & Attribute.DefaultTo<'Blogs'>;
     description: Attribute.String &
       Attribute.DefaultTo<'Our take on everything that makes a business thrive or struggle.'>;
-    heroBackground: Attribute.Media<'images'>;
-    mobileViewBackground: Attribute.Media<'images'>;
+    heroBackground: Attribute.Media<'images'> & Attribute.Required;
+    mobileViewBackground: Attribute.Media<'images'> & Attribute.Required;
     mobileViewDescription: Attribute.Text &
       Attribute.DefaultTo<'Our take on everything that makes a business thrive or struggle.'>;
-  };
-}
-
-export interface AllBlogsElementsShowAllBlogs extends Schema.Component {
-  collectionName: 'components_all_blogs_elements_show_all_blogs';
-  info: {
-    displayName: 'ShowAllBlogs';
-  };
-  attributes: {
-    showAllBlogs: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<true>;
-  };
-}
-
-export interface AllBlogsElementsHero extends Schema.Component {
-  collectionName: 'components_all_blogs_elements_heroes';
-  info: {
-    displayName: 'Hero';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    searchPlaceholder: Attribute.String;
-    heroBackground: Attribute.Media<'images'>;
-    mobileViewBackground: Attribute.Media<'images'>;
-    mobileViewDescription: Attribute.Text;
   };
 }
 
@@ -897,8 +872,36 @@ export interface AllCaseStudiesElementsHero extends Schema.Component {
     title: Attribute.String;
     description: Attribute.Text;
     searchPlaceholder: Attribute.String;
-    heroBackground: Attribute.Media<'images'>;
-    mobileViewBackground: Attribute.Media<'images'>;
+    heroBackground: Attribute.Media<'images'> & Attribute.Required;
+    mobileViewBackground: Attribute.Media<'images'> & Attribute.Required;
+    mobileViewDescription: Attribute.Text;
+  };
+}
+
+export interface AllBlogsElementsShowAllBlogs extends Schema.Component {
+  collectionName: 'components_all_blogs_elements_show_all_blogs';
+  info: {
+    displayName: 'ShowAllBlogs';
+  };
+  attributes: {
+    showAllBlogs: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<true>;
+  };
+}
+
+export interface AllBlogsElementsHero extends Schema.Component {
+  collectionName: 'components_all_blogs_elements_heroes';
+  info: {
+    displayName: 'Hero';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    searchPlaceholder: Attribute.String;
+    heroBackground: Attribute.Media<'images'> & Attribute.Required;
+    mobileViewBackground: Attribute.Media<'images'> & Attribute.Required;
     mobileViewDescription: Attribute.Text;
   };
 }
@@ -907,6 +910,7 @@ export interface AboutUsElementsShowcase extends Schema.Component {
   collectionName: 'components_about_us_elements_showcases';
   info: {
     displayName: 'Showcase';
+    description: '';
   };
   attributes: {
     card: Attribute.Component<'about-us-elements.showcase-card', true> &
@@ -923,9 +927,10 @@ export interface AboutUsElementsShowcaseCard extends Schema.Component {
   collectionName: 'components_about_us_elements_showcase_cards';
   info: {
     displayName: 'ShowcaseCard';
+    description: '';
   };
   attributes: {
-    image: Attribute.Media<'images'>;
+    image: Attribute.Media<'images'> & Attribute.Required;
     title: Attribute.String;
     description: Attribute.Text;
   };
@@ -941,8 +946,8 @@ export interface AboutUsElementsHero extends Schema.Component {
     title: Attribute.String;
     description: Attribute.Text;
     buttonText: Attribute.String;
-    heroBackground: Attribute.Media<'images'>;
-    mobileViewBackground: Attribute.Media<'images'>;
+    heroBackground: Attribute.Media<'images'> & Attribute.Required;
+    mobileViewBackground: Attribute.Media<'images'> & Attribute.Required;
     mobileViewDescription: Attribute.Text;
   };
 }
@@ -975,8 +980,6 @@ declare module '@strapi/types' {
       'services-elements.service-category': ServicesElementsServiceCategory;
       'services-elements.industry-card': ServicesElementsIndustryCard;
       'services-elements.hero': ServicesElementsHero;
-      'privacy-policy-elements.privacy-policy-content': PrivacyPolicyElementsPrivacyPolicyContent;
-      'privacy-policy-elements.hero': PrivacyPolicyElementsHero;
       'service-sector-elements.why-choose-us': ServiceSectorElementsWhyChooseUs;
       'service-sector-elements.why-choose-us-card': ServiceSectorElementsWhyChooseUsCard;
       'service-sector-elements.services': ServiceSectorElementsServices;
@@ -986,6 +989,8 @@ declare module '@strapi/types' {
       'service-sector-elements.our-approach': ServiceSectorElementsOurApproach;
       'service-sector-elements.our-approach-card': ServiceSectorElementsOurApproachCard;
       'service-sector-elements.hero': ServiceSectorElementsHero;
+      'privacy-policy-elements.privacy-policy-content': PrivacyPolicyElementsPrivacyPolicyContent;
+      'privacy-policy-elements.hero': PrivacyPolicyElementsHero;
       'industry-sector-elements.pain-point': IndustrySectorElementsPainPoint;
       'industry-sector-elements.pain-point-card': IndustrySectorElementsPainPointCard;
       'industry-sector-elements.our-solution': IndustrySectorElementsOurSolution;
@@ -1020,10 +1025,10 @@ declare module '@strapi/types' {
       'blogs-elements.latest-posts': BlogsElementsLatestPosts;
       'blogs-elements.blog-content': BlogsElementsBlogContent;
       'blogs-elements.banner': BlogsElementsBanner;
-      'all-blogs-elements.show-all-blogs': AllBlogsElementsShowAllBlogs;
-      'all-blogs-elements.hero': AllBlogsElementsHero;
       'all-case-studies-elements.show-all-case-studies': AllCaseStudiesElementsShowAllCaseStudies;
       'all-case-studies-elements.hero': AllCaseStudiesElementsHero;
+      'all-blogs-elements.show-all-blogs': AllBlogsElementsShowAllBlogs;
+      'all-blogs-elements.hero': AllBlogsElementsHero;
       'about-us-elements.showcase': AboutUsElementsShowcase;
       'about-us-elements.showcase-card': AboutUsElementsShowcaseCard;
       'about-us-elements.hero': AboutUsElementsHero;

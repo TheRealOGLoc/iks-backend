@@ -1,16 +1,18 @@
 {
   "collectionName": "components_industry_sector_elements_our_solution_cards",
   "info": {
-    "displayName": "OurSolutionCard"
+    "displayName": "OurSolutionCard",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "title": {
       "type": "string"
