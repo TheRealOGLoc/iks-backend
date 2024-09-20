@@ -1031,16 +1031,18 @@ export interface ApiCommentComment extends Schema.CollectionType {
     singularName: 'comment';
     pluralName: 'comments';
     displayName: 'Comment';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    postSlug: Attribute.String & Attribute.Required;
+    slug: Attribute.String & Attribute.Required;
     name: Attribute.String;
     email: Attribute.String;
     website: Attribute.String;
     comment: Attribute.Text & Attribute.Required;
+    type: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
