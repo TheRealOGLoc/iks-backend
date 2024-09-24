@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_about_us_elements_our_messages",
+  "info": {
+    "displayName": "OurMessage",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "jobTitle": {
+      "type": "string"
+    },
+    "ourMessage": {
+      "type": "blocks"
+    }
+  }
+}

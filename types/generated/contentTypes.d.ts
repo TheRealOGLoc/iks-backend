@@ -804,10 +804,10 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
       [
         'about-us-elements.hero',
         'about-us-elements.affiliation',
-        'about-us-elements.showcase',
         'global-elements.transform-business',
         'global-elements.footer',
-        'global-elements.seo'
+        'global-elements.seo',
+        'about-us-elements.our-message'
       ]
     >;
     createdAt: Attribute.DateTime;

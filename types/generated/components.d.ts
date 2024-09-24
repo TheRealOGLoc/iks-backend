@@ -783,35 +783,6 @@ export interface GlobalElementsAlign extends Schema.Component {
   };
 }
 
-export interface AllCaseStudiesElementsShowAllCaseStudies
-  extends Schema.Component {
-  collectionName: 'components_all_case_studies_elements_show_all_case_studies';
-  info: {
-    displayName: 'ShowAllCaseStudies';
-  };
-  attributes: {
-    showAllCaseStudies: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<true>;
-  };
-}
-
-export interface AllCaseStudiesElementsHero extends Schema.Component {
-  collectionName: 'components_all_case_studies_elements_heroes';
-  info: {
-    displayName: 'Hero';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    searchPlaceholder: Attribute.String;
-    heroBackground: Attribute.Media<'images'> & Attribute.Required;
-    mobileViewBackground: Attribute.Media<'images'> & Attribute.Required;
-    mobileViewDescription: Attribute.Text;
-  };
-}
-
 export interface BlogsElementsLeaveReply extends Schema.Component {
   collectionName: 'components_blogs_elements_leave_replies';
   info: {
@@ -877,6 +848,35 @@ export interface BlogsElementsBanner extends Schema.Component {
   };
 }
 
+export interface AllCaseStudiesElementsShowAllCaseStudies
+  extends Schema.Component {
+  collectionName: 'components_all_case_studies_elements_show_all_case_studies';
+  info: {
+    displayName: 'ShowAllCaseStudies';
+  };
+  attributes: {
+    showAllCaseStudies: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<true>;
+  };
+}
+
+export interface AllCaseStudiesElementsHero extends Schema.Component {
+  collectionName: 'components_all_case_studies_elements_heroes';
+  info: {
+    displayName: 'Hero';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    searchPlaceholder: Attribute.String;
+    heroBackground: Attribute.Media<'images'> & Attribute.Required;
+    mobileViewBackground: Attribute.Media<'images'> & Attribute.Required;
+    mobileViewDescription: Attribute.Text;
+  };
+}
+
 export interface AllBlogsElementsShowAllBlogs extends Schema.Component {
   collectionName: 'components_all_blogs_elements_show_all_blogs';
   info: {
@@ -932,6 +932,20 @@ export interface AboutUsElementsShowcaseCard extends Schema.Component {
     image: Attribute.Media<'images'> & Attribute.Required;
     title: Attribute.String;
     description: Attribute.Text;
+  };
+}
+
+export interface AboutUsElementsOurMessage extends Schema.Component {
+  collectionName: 'components_about_us_elements_our_messages';
+  info: {
+    displayName: 'OurMessage';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    name: Attribute.String;
+    jobTitle: Attribute.String;
+    ourMessage: Attribute.Blocks;
   };
 }
 
@@ -1020,16 +1034,17 @@ declare module '@strapi/types' {
       'global-elements.footer': GlobalElementsFooter;
       'global-elements.canonical-tag': GlobalElementsCanonicalTag;
       'global-elements.align': GlobalElementsAlign;
-      'all-case-studies-elements.show-all-case-studies': AllCaseStudiesElementsShowAllCaseStudies;
-      'all-case-studies-elements.hero': AllCaseStudiesElementsHero;
       'blogs-elements.leave-reply': BlogsElementsLeaveReply;
       'blogs-elements.latest-posts': BlogsElementsLatestPosts;
       'blogs-elements.blog-content': BlogsElementsBlogContent;
       'blogs-elements.banner': BlogsElementsBanner;
+      'all-case-studies-elements.show-all-case-studies': AllCaseStudiesElementsShowAllCaseStudies;
+      'all-case-studies-elements.hero': AllCaseStudiesElementsHero;
       'all-blogs-elements.show-all-blogs': AllBlogsElementsShowAllBlogs;
       'all-blogs-elements.hero': AllBlogsElementsHero;
       'about-us-elements.showcase': AboutUsElementsShowcase;
       'about-us-elements.showcase-card': AboutUsElementsShowcaseCard;
+      'about-us-elements.our-message': AboutUsElementsOurMessage;
       'about-us-elements.hero': AboutUsElementsHero;
       'about-us-elements.affiliation': AboutUsElementsAffiliation;
     }
