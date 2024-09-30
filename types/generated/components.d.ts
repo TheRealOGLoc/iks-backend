@@ -579,7 +579,6 @@ export interface HomepageElementsNumberCard extends Schema.Component {
   };
   attributes: {
     number: Attribute.Integer;
-    description: Attribute.Text;
     plusSign: Attribute.Boolean & Attribute.DefaultTo<false>;
     title: Attribute.String;
   };

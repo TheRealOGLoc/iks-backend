@@ -9,9 +9,6 @@
     "number": {
       "type": "integer"
     },
-    "description": {
-      "type": "text"
-    },
     "plusSign": {
       "type": "boolean",
       "default": false
