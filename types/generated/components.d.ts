@@ -733,28 +733,6 @@ export interface GlobalElementsFooter extends Schema.Component {
     emailPlaceHolder: Attribute.String &
       Attribute.DefaultTo<'Enter your email'>;
     buttonText: Attribute.String & Attribute.DefaultTo<'Subscribe'>;
-    menuLabel: Attribute.String & Attribute.DefaultTo<'Menu'>;
-    menuHome: Attribute.String & Attribute.DefaultTo<'Home'>;
-    companyLabel: Attribute.String & Attribute.DefaultTo<'Company'>;
-    locationLabel: Attribute.String & Attribute.DefaultTo<'Location'>;
-    locationAddressLineOne: Attribute.Text &
-      Attribute.DefaultTo<'SYDNEY, AUSTRALIA'>;
-    phoneLabel: Attribute.String & Attribute.DefaultTo<'Phone'>;
-    phoneNumber: Attribute.String & Attribute.DefaultTo<'02 9139 8874'>;
-    mailLabel: Attribute.String & Attribute.DefaultTo<'Mail'>;
-    mailAddress: Attribute.String &
-      Attribute.DefaultTo<'info@infinikeysolutions.com.au'>;
-    locationAddressLineTwo: Attribute.Text &
-      Attribute.DefaultTo<'Level 14, 32 Smith St,\u2028Paramatta NSW 2150'>;
-    menuServices: Attribute.String & Attribute.DefaultTo<'Services'>;
-    menuIndustries: Attribute.String & Attribute.DefaultTo<'Industries'>;
-    menuBlogs: Attribute.String & Attribute.DefaultTo<'Blogs'>;
-    menuCaseStudies: Attribute.String & Attribute.DefaultTo<'Case Studies'>;
-    companyAboutUs: Attribute.String & Attribute.DefaultTo<'About Us'>;
-    companyOurTeam: Attribute.String & Attribute.DefaultTo<'Our Team'>;
-    companyTestimonials: Attribute.String & Attribute.DefaultTo<'Testimonials'>;
-    companyPrivacyPolicy: Attribute.String &
-      Attribute.DefaultTo<'Privacy Policy'>;
   };
 }
 
