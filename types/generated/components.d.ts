@@ -245,7 +245,6 @@ export interface ServiceSectorElementsServiceCard extends Schema.Component {
     descriptionOne: Attribute.Text;
     descriptionTwo: Attribute.Text;
     descriptionThree: Attribute.Text;
-    image: Attribute.Media<'images'>;
   };
 }
 
