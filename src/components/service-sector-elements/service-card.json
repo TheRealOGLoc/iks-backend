@@ -17,6 +17,13 @@
     },
     "descriptionThree": {
       "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
